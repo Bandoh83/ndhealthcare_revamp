@@ -278,7 +278,7 @@ export default function Home() {
           // },
           {
             title: 'Location',
-            subTitle: 'New York, US',
+            subTitle: 'Accra, Ghana',
             iconUrl: '/images/icons/pin.svg',
           },
         ]}
