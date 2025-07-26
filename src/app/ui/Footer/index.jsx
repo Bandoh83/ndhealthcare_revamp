@@ -35,7 +35,7 @@ export default function Footer() {
             <div className="col-lg-4">
               <div className="cs_footer_item">
                 <Newsletter
-                  title="Be Our Subscribers"
+                  title="Want to be part of out Partners?"
                   subTitle="To get the latest news about health from our experts"
                 />
               </div>
@@ -48,7 +48,7 @@ export default function Footer() {
           <div className="cs_footer_bottom_in">
             <SocialWidget />
             <div className="cs_copyright">
-              Copyright © 2024 Pro Health. All rights reserved.
+              Copyright © 2025 ND Healthcare. All rights reserved.
             </div>
           </div>
         </div>

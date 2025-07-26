@@ -11,14 +11,14 @@ export default function SocialWidget() {
         <Link href="/">
           <Icon icon="fa-brands:facebook-f" />
         </Link>
-        <Link href="/">
-          <Icon icon="fa-brands:youtube" />
-        </Link>
+        {/* <Link href="/">
+          <Icon icon="fa-brands:youtube" /> */}
+        {/* </Link>
         <Link href="/">
           <Icon icon="fa-brands:linkedin-in" />
-        </Link>
+        </Link> */}
         <Link href="/">
-          <Icon icon="fa-brands:twitter" />
+          <Icon icon="fa-brands:tiktok" />
         </Link>
         <Link href="/">
           <Icon icon="fa-brands:instagram" />

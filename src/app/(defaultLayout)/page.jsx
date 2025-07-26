@@ -4,11 +4,8 @@ import Hero from '../ui/Hero';
 import Section from '../ui/Section';
 import FeaturesSectionStyle4 from '../ui/Section/FeaturesSection/FeaturesSectionStyle4';
 import AboutSection from '../ui/Section/AboutSection';
-import DepartmentSection from '../ui/Section/DepartmentSection';
 import AwardSection from '../ui/Section/AwardSection';
 import TestimonialSection from '../ui/Section/TestimonialSection';
-import Banner from '../ui/Section/BannerSection';
-import BlogSection from '../ui/Section/BlogSection';
 import AppointmentSection from '../ui/Section/AppointmentSection';
 import FaqSection from '../ui/Section/FaqSection';
 import BrandsSection from '../ui/Section/BrandsSection';
@@ -17,7 +14,6 @@ import FeaturesSectionStyle5 from '../ui/Section/FeaturesSection/FeaturesSection
 // Large Images for blur placeholder
 import heroImage from '../../../public/images/home_1/hero_img.png';
 import aboutImage from '../../../public/images/home_1/about.png';
-import bannerImg from '../../../public/images/home_1/cta_img.png';
 import appointmentImg from '../../../public/images/home_1/appointment.jpg';
 import { HiHeart, HiUserGroup, HiShieldCheck } from 'react-icons/hi2';
 import {
@@ -166,32 +162,7 @@ const faqData = [
       'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesent voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui.',
   },
 ];
-const blogData = [
-  {
-    title: 'The Benefits of Mindfulness Meditation for Stress and Anxiety',
-    thumbUrl: '/images/home_1/post_1.jpeg',
-    date: 'May 1, 2023',
-    btnText: 'Learn More',
-    href: '/blog/blog-details',
-    socialShare: true,
-  },
-  {
-    title: 'Healthy Eating on a Budget: Tips and Strategies',
-    thumbUrl: '/images/home_1/post_2.jpeg',
-    date: 'May 4, 2023',
-    btnText: 'Learn More',
-    href: '/blog/blog-details',
-    socialShare: true,
-  },
-  {
-    title: 'The Importance of Regular Cancer Screenings and Early Detection',
-    thumbUrl: '/images/home_1/post_3.jpeg',
-    date: 'May 1, 2023',
-    btnText: 'Learn More',
-    href: '/blog/blog-details',
-    socialShare: true,
-  },
-];
+
 const awardData = [
   {
     title: 'Mission',
@@ -268,7 +239,7 @@ export default function Home() {
         infoList={[
           {
             title: 'Hotline',
-            subTitle: '123-456-7890',
+            subTitle: '0530610013',
             iconUrl: '/images/contact/icon_1.svg',
           },
           // {
@@ -277,9 +248,9 @@ export default function Home() {
           //   iconUrl: '/images/icons/ambulance.svg',
           // },
           {
-            title: 'Location',
-            subTitle: 'Accra, Ghana',
-            iconUrl: '/images/icons/pin.svg',
+            title: 'Email',
+            subTitle: 'info@ndhealthcare.net',
+            iconUrl: '/images/icons/envlope.svg',
           },
         ]}
         btnText="Book Now"
