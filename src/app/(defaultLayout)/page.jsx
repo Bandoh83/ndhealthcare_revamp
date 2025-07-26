@@ -18,7 +18,7 @@ import FeaturesSectionStyle5 from '../ui/Section/FeaturesSection/FeaturesSection
 import heroImage from '../../../public/images/home_1/hero_img.png';
 import aboutImage from '../../../public/images/home_1/about.png';
 import bannerImg from '../../../public/images/home_1/cta_img.png';
-import appointmentImg from '../../../public/images/home_1/appointment.jpeg';
+import appointmentImg from '../../../public/images/home_1/appointment.jpg';
 import { HiHeart, HiUserGroup, HiShieldCheck } from 'react-icons/hi2';
 import {
   FaHandsHelping,
@@ -141,12 +141,12 @@ const workingProcessData = [
 
 const faqData = [
   {
-    title: 'What services does ProHealth offer?',
+    title: 'What services does ND Healthcare offer?',
     content:
       'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesent voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui.',
   },
   {
-    title: 'How do I schedule an appointment with ProHealth?',
+    title: 'How do I schedule an appointment',
     content:
       'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesent voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui.',
   },

@@ -25,12 +25,12 @@ export default function AppointmentForm() {
       </div>
       <div className="col-lg-12">
         <label className="cs_input_label cs_heading_color">
-          Medical Record Number
+          Description
         </label>
         <input
           type="text"
           className="cs_form_field"
-          placeholder="123456-7890-0987"
+          placeholder="Reason for appointment, etc."
         />
         <div className="cs_height_42 cs_height_xl_25" />
       </div>
@@ -70,53 +70,9 @@ export default function AppointmentForm() {
         </div>
         <div className="cs_height_42 cs_height_xl_25" />
       </div>
+
       <div className="col-lg-12">
-        <label className="cs_input_label cs_heading_color">
-          Reason for Visit
-        </label>
-        <div className="cs_radio_group">
-          <div className="cs_radio_wrap">
-            <input
-              className="cs_radio_input"
-              type="radio"
-              name="reasonForVisit"
-              id="routineCheckup"
-              defaultValue="routineCheckup"
-            />
-            <label className="cs_radio_label" htmlFor="routineCheckup">
-              Routine Checkup
-            </label>
-          </div>
-          <div className="cs_radio_wrap">
-            <input
-              className="cs_radio_input"
-              type="radio"
-              name="reasonForVisit"
-              id="newPatientVisit"
-              defaultValue="newPatientVisit"
-              defaultChecked=""
-            />
-            <label className="cs_radio_label" htmlFor="newPatientVisit">
-              New Patient Visit
-            </label>
-          </div>
-          <div className="cs_radio_wrap">
-            <input
-              className="cs_radio_input"
-              type="radio"
-              name="reasonForVisit"
-              id="specificConcern"
-              defaultValue="specificConcern"
-            />
-            <label className="cs_radio_label" htmlFor="specificConcern">
-              Specific Concern
-            </label>
-          </div>
-        </div>
-        <div className="cs_height_42 cs_height_xl_25" />
-      </div>
-      <div className="col-lg-12">
-        <label className="cs_input_label cs_heading_color">Department</label>
+        <label className="cs_input_label cs_heading_color">Service</label>
         <div className="cs_radio_group">
           <div className="cs_radio_wrap">
             <input
@@ -127,7 +83,7 @@ export default function AppointmentForm() {
               defaultValue="pediatric"
             />
             <label className="cs_radio_label" htmlFor="pediatric">
-              Pediatric
+              Full Support Services 
             </label>
           </div>
           <div className="cs_radio_wrap">
@@ -140,7 +96,7 @@ export default function AppointmentForm() {
               defaultChecked=""
             />
             <label className="cs_radio_label" htmlFor="obstetricsGynecology">
-              Obstetrics and Gynecology
+              Baby and Child Care
             </label>
           </div>
           <div className="cs_radio_wrap">
@@ -152,7 +108,7 @@ export default function AppointmentForm() {
               defaultValue="cardiology"
             />
             <label className="cs_radio_label" htmlFor="cardiology">
-              Cardiology
+              Home Visits/ Assessments 
             </label>
           </div>
           <div className="cs_radio_wrap">
@@ -164,7 +120,79 @@ export default function AppointmentForm() {
               defaultValue="neurology"
             />
             <label className="cs_radio_label" htmlFor="neurology">
-              Neurology
+              Post - Surgical Care 
+            </label>
+          </div>
+           <div className="cs_radio_wrap">
+            <input
+              className="cs_radio_input"
+              type="radio"
+              name="department"
+              id="neurology"
+              defaultValue="neurology"
+            />
+            <label className="cs_radio_label" htmlFor="neurology">
+              Neurological Care
+            </label>
+          </div>
+           <div className="cs_radio_wrap">
+            <input
+              className="cs_radio_input"
+              type="radio"
+              name="department"
+              id="neurology"
+              defaultValue="neurology"
+            />
+            <label className="cs_radio_label" htmlFor="neurology">
+              Autism Care
+            </label>
+          </div>
+           <div className="cs_radio_wrap">
+            <input
+              className="cs_radio_input"
+              type="radio"
+              name="department"
+              id="neurology"
+              defaultValue="neurology"
+            />
+            <label className="cs_radio_label" htmlFor="neurology">
+              Dementia Care  
+            </label>
+          </div>
+           <div className="cs_radio_wrap">
+            <input
+              className="cs_radio_input"
+              type="radio"
+              name="department"
+              id="neurology"
+              defaultValue="neurology"
+            />
+            <label className="cs_radio_label" htmlFor="neurology">
+              Elderly Support Care  
+            </label>
+          </div>
+                     <div className="cs_radio_wrap">
+            <input
+              className="cs_radio_input"
+              type="radio"
+              name="department"
+              id="neurology"
+              defaultValue="neurology"
+            />
+            <label className="cs_radio_label" htmlFor="neurology">
+              Bedridden Care  
+            </label>
+          </div>
+                     <div className="cs_radio_wrap">
+            <input
+              className="cs_radio_input"
+              type="radio"
+              name="department"
+              id="neurology"
+              defaultValue="neurology"
+            />
+            <label className="cs_radio_label" htmlFor="neurology">
+              Live - in Care  
             </label>
           </div>
         </div>

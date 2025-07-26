@@ -22,7 +22,7 @@ export default function Contact() {
           </div>
         </div>
       </div>
-      <Section
+      {/* <Section
         topMd={200}
         topLg={150}
         topXl={100}
@@ -31,7 +31,7 @@ export default function Contact() {
         bottomXl={110}
       >
         <ContactInfoSection sectionTitle="Find Us Here" />
-      </Section>
+      </Section> */}
     </>
   );
 }

@@ -50,49 +50,49 @@ const departmentData = [
     title: 'Post-Surgical Care',
     subTitle:
       'Support for recovery after surgery, including wound care, mobility assistance, and medication management.',
-    href: '/departments/department-details',
+    href: '',
   },
   {
     iconUrl: '/images/departments/icon_1.svg',
     title: 'Neurological Care',
     subTitle:
       'Specialized care for neurological conditions like stroke, Parkinson’s, or MS, focusing on recovery and quality of life.',
-    href: '/departments/department-details',
+    href: '',
   },
   {
     iconUrl: '/images/departments/icon_1.svg',
     title: 'Autism Care',
     subTitle:
       'Tailored support for individuals with autism, including behavioral therapy, social skill-building, and family guidance.',
-    href: '/departments/department-details',
+    href: '',
   },
   {
     iconUrl: '/images/departments/icon_1.svg',
     title: 'Dementia Care',
     subTitle:
       'Compassionate care for dementia patients, focusing on memory care, safety, and daily living support.',
-    href: '/departments/department-details',
+    href: '',
   },
   {
     iconUrl: '/images/departments/icon_1.svg',
     title: 'Elderly Support Care',
     subTitle:
       'Assistance for seniors with daily tasks, mobility, medical needs, and companionship for enhanced quality of life.',
-    href: '/departments/department-details',
+    href: '',
   },
   {
     iconUrl: '/images/departments/icon_1.svg',
     title: 'Bedridden Care',
     subTitle:
       'Focused care for immobile patients, including hygiene, repositioning, and prevention of bedsores.',
-    href: '/departments/department-details',
+    href: '',
   },
   {
     iconUrl: '/images/departments/icon_1.svg',
     title: 'Live-In Care',
     subTitle:
       '24/7 care provided by a professional caregiver living in the patient’s home to ensure constant support.',
-    href: '/departments/department-details',
+    href: '',
   },
   // {
   //   iconUrl: '/images/departments/icon_1.svg',
