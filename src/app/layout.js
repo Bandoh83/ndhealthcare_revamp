@@ -15,13 +15,13 @@ const poppins = Poppins({
 export const metadata = {
   title: {
     absolute: '',
-    default: 'ProHealth - Medical and Healthcare NextJS Template',
-    template: '%s | ProHealth - Medical and Healthcare NextJS Template',
+    default: 'ND Healthcare',
+    template: '%s | ND Healthcare',
   },
-  description: 'ProHealth - Medical and Healthcare NextJS Template',
+  description: 'ND Healthcare',
   openGraph: {
-    title: 'ProHealth - Medical and Healthcare NextJS Template',
-    description: 'ProHealth - Medical and Healthcare NextJS Template',
+    title: 'ND Healthcare',
+    description: 'ND Healthcare',
     images: ['/openGraphImage.jpeg'],
   },
 };
