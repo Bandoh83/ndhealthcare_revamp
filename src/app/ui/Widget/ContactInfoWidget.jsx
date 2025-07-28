@@ -8,19 +8,19 @@ export default function ContactInfoWidget() {
         <i className="cs_accent_bg">
           <Icon icon="ep:location" />
         </i>
-        123 Anywhere St., Any City 12345
+        City Galleria, 4th Floor opposite the Accra Mall off the Spintex Road,
       </li>
       <li>
         <i className="cs_accent_bg">
           <Icon icon="fluent:call-24-regular" />
         </i>
-        123-456-7890
+        0530610013
       </li>
       <li>
         <i className="cs_accent_bg">
           <Icon icon="bi:envelope" />
         </i>
-        hellocallcenter@gmail.com
+        info@ndhealthcare.net
       </li>
     </ul>
   );

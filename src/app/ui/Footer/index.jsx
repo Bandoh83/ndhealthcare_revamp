@@ -14,7 +14,6 @@ const menuDataOne = [
 
 ];
 
-
 export default function Footer() {
   return (
     <footer className="cs_footer cs_heading_color">
