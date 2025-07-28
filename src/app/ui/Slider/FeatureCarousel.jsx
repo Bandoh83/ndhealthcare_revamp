@@ -50,10 +50,10 @@ export default function FeatureCarousel({ sectionTitle, data }) {
             <Spacing md="30" xl="0" />
             <div className="cs_slider_navigation cs_style_2">
               <div className="cs_slider_prev cs_center" onClick={previous}>
-                <FiArrowLeft size={20} color="#FE4B06" />
+                <FiArrowLeft size={20} color="#E9722B" />
               </div>
               <div className="cs_slider_next cs_center" onClick={next}>
-                <FiArrowRight size={20} color="#FE4B06" />
+                <FiArrowRight size={20} color="#E9722B" />
               </div>
             </div>
             <div className="cs_height_0 cs_height_lg_30" />

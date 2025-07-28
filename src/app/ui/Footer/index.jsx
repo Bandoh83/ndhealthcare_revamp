@@ -42,7 +42,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className="cs_footer_bottom cs_primary_bg">
+      <div className="cs_footer_bottom cs_accent_bg">
         <div className="container">
           <div className="cs_footer_bottom_in">
             <SocialWidget />

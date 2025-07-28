@@ -47,14 +47,14 @@ export default function Header({ logoSrc, variant }) {
                     }`}
                   >
                     <li>
-                      <Link href="/" onClick={() => setMobileToggle(false)}  style={{ color: '#FE4B06' }}>
+                      <Link href="/" onClick={() => setMobileToggle(false)}  style={{ color: '#E9722B' }}>
                         Home
                       </Link>
                     </li>
                     <li>
                       <Link
                         href="/about"
-                        onClick={() => setMobileToggle(false)} style={{ color: '#FE4B06' }}>
+                        onClick={() => setMobileToggle(false)} style={{ color: '#E9722B' }}>
                         About Us
                       </Link>
                     </li>
@@ -62,7 +62,7 @@ export default function Header({ logoSrc, variant }) {
                       <Link
                         href="/services"
                         onClick={() => setMobileToggle(false)}
-                     style={{ color: '#FE4B06' }} >
+                     style={{ color: '#E9722B' }} >
                         Our Services
                       </Link>
                     </li>
@@ -70,7 +70,7 @@ export default function Header({ logoSrc, variant }) {
                       <Link
                         href="/pricing-plan"
                         onClick={() => setMobileToggle(false)}
-                     style={{ color: '#FE4B06' }} >
+                     style={{ color: '#E9722B' }} >
                         Pricing
                       </Link>
                     </li>
@@ -78,7 +78,7 @@ export default function Header({ logoSrc, variant }) {
                       <Link
                         href="/contact"
                         onClick={() => setMobileToggle(false)}
-                    style={{ color: '#FE4B06' }}  >
+                    style={{ color: '#E9722B' }}  >
                         Contact
                       </Link>
                     </li>

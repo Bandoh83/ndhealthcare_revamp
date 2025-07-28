@@ -14,7 +14,7 @@ export default function Services() {
         bgUrl="/images/departments/hero_bg.png"
         imgUrl={bannerImg}
         title="Discover the <br>Services at ND Healthcare"
-        subTitle="At ProHealth, we provide a comprehensive selection of medical and healthcare services tailored to your unique needs, supporting you on your journey to optimal well-being."
+        subTitle="At Nd healthcare, we provide a comprehensive selection of medical and healthcare services tailored to your unique needs, supporting you on your journey to optimal well-being."
       />
       <Section bottomMd={140} bottomLg={100} bottomXl={60}>
         <DepartmentSectionStyle3 data={departmentData} />

@@ -50,7 +50,7 @@ export default function Testimonial() {
           <div className="cs_testimonial cs_style_1">
             <Image src="/images/icons/quote.svg" alt="Icon" height={38} width={50} />
             <p>
-              I recently had to bring my child to ProHealth for a minor injury,
+              I recently had to bring my child to Nd healthcare for a minor injury,
               and I was so impressed with the care he received. The pediatrician
               was great with him and made him feel at ease, and the entire staff
               was kind and attentive.
@@ -64,7 +64,7 @@ export default function Testimonial() {
             <p>
               The pediatrician was great with him and made him feel at ease, and
               the entire staff was kind and attentive. I recently had to bring
-              my child to ProHealth for a minor injury, and I was so impressed
+              my child to Nd healthcare for a minor injury, and I was so impressed
               with the care he received.
             </p>
             <Rating ratingNumber={4.5} />
@@ -76,7 +76,7 @@ export default function Testimonial() {
             <p>
               I was so impressed with the care he received. The pediatrician was
               great with him and made him feel at ease, and the entire staff was
-              kind and attentive I recently had to bring my child to ProHealth
+              kind and attentive I recently had to bring my child to Nd healthcare
               for a minor injury, and .
             </p>
             <Rating ratingNumber={4.5} />

@@ -36,7 +36,7 @@ export default function FooterStyle4() {
             <div className="cs_footer_item">
               <TextWidget
                 logoUrl="/images/footer_logo_white.svg"
-                text="ProHealth Medical & Healthcare Center"
+                text="Nd healthcare Medical & Healthcare Center"
               />
               <ContactInfoWidget />
             </div>

@@ -33,8 +33,8 @@ export default function AppointmentSection({
               y2="-69.4782"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stopColor="#86BBF1" offset={0} />
-              <stop offset={1} stopColor="#D2EAEF" />
+              <stop stopColor="#f3a685ff" offset={0} />
+              <stop offset={1} stopColor="#E8D7D0" />
             </linearGradient>
           </defs>
         </svg>

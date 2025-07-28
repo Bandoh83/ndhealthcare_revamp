@@ -273,7 +273,7 @@ hr {
   background-color: $primary;
 }
 .cs_gray_bg_1 {
-  background-color: rgba(210, 234, 239, 0.2);
+  background-color: #e8d7d068;
 }
 .cs_half_bg,
 .cs_half_bg_2 {
@@ -858,14 +858,14 @@ input::-ms-input-placeholder,
 .cs_shape_wrap {
   position: relative;
   .cs_shape_1 {
-    width: 1884px;
-    height: 1884px;
+    width: 900px;
+    height: 900px;
     border-radius: 50%;
     opacity: 0.6;
     background: radial-gradient(
       42.35% 42.35% at 50% 50%,
-      rgba(134, 187, 241, 0.38) 0%,
-      rgba(134, 187, 241, 0) 100%
+     #E8D7D0 0%,
+      #E8D7D0 100%
     );
     position: absolute;
     top: 31%;
@@ -877,7 +877,7 @@ input::-ms-input-placeholder,
       top: -59%;
     }
     &.cs_position_2 {
-      right: 38%;
+      right: 78%;
       top: 39%;
     }
     &.cs_position_3 {

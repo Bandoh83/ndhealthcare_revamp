@@ -75,12 +75,12 @@ const pricingData = [
 ];
 const faqData = [
   {
-    title: 'What services does ProHealth offer?',
+    title: 'What services does Nd healthcare offer?',
     content:
       'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesent voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui.',
   },
   {
-    title: 'How do I schedule an appointment with ProHealth?',
+    title: 'How do I schedule an appointment with Nd healthcare?',
     content:
       'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesent voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui.',
   },
@@ -120,7 +120,7 @@ export default function PricingPlan() {
         bottomXl={110}
       >
         <PricingSection
-          sectionTitle="Choose Your ProHealth <br />Membership Plan"
+          sectionTitle="Choose Your Nd healthcare <br />Membership Plan"
           data={pricingData}
         />
       </Section>

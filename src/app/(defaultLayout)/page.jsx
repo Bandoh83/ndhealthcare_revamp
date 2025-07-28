@@ -30,19 +30,19 @@ import {
 
 const featureListData = [
   {
-    iconUrl: <HiHeart size={40} color="#FE4B06" />,
+    iconUrl: <HiHeart size={40} color="#E9722B" />,
     title: 'Compassion',
     subTitle:
       'We believe in providing care with empathy, understanding, and kindness. We treat every individual as a member of our own family, offering not just assistance, but companionship and emotional support.',
   },
   {
-    iconUrl: <HiUserGroup size={40} color="#FE4B06" />,
+    iconUrl: <HiUserGroup size={40} color="#E9722B" />,
     title: 'Respect',
     subTitle:
       'We respect the dignity, preferences, and privacy of every person we serve. We honor each individual’s unique needs and work with them and their families to ensure they receive personalized, respectful care.',
   },
   {
-    iconUrl: <HiShieldCheck size={40} color="#FE4B06" />,
+    iconUrl: <HiShieldCheck size={40} color="#E9722B" />,
     title: 'Integrity',
     subTitle: `We are committed to acting with honesty and transparency in all our dealings. We maintain high ethical standards and ensure that our clients, their families, and our caregivers can always trust us to act in their best interests.`,
   },
@@ -301,8 +301,7 @@ export default function Home() {
         topXl={100}
         bottomMd={200}
         bottomLg={150}
-        bottomXl={110}
-      >
+        bottomXl={110}>
         <WorkingProcess
           sectionTitle="How it Works"
           sectionTitleUp=""
