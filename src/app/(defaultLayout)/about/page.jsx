@@ -132,7 +132,7 @@ export default function About() {
   return (
     <>
       <BannerSectionStyle3
-        bgUrl="/images/about/hero_bg.jpeg"
+        bgUrl="/images/about/hero_bg.png"
         imgUrl={bannerImg}
         title="Welcome to <br /> ND Healthcare"
         subTitle="we provide compassionate, personalized homecare tailored to each individual's needs. Our dedicated team of doctors, nurses, and caregivers delivers high-quality support—from elderly and autism care to post-surgical and daily assistance—helping clients live with dignity and independence in the comfort of their homes."

@@ -104,7 +104,7 @@ export default function PricingPlan() {
   return (
     <>
       <BannerSectionStyle3
-        bgUrl="/images/pricing_plan/hero_bg.jpeg"
+        bgUrl="/images/pricing_plan/hero_bg.png"
         imgUrl={bannerImg}
         title="Find the Right Plan <br>for You"
         subTitle="Explore Our Membership Options and Start Your Journey to Better Health"

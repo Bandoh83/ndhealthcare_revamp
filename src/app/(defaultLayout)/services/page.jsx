@@ -11,7 +11,7 @@ export default function Services() {
   return (
     <>
       <BannerSectionStyle5
-        bgUrl="/images/departments/hero_bg.jpeg"
+        bgUrl="/images/departments/hero_bg.png"
         imgUrl={bannerImg}
         title="Discover the <br>Services at ND Healthcare"
         subTitle="At ProHealth, we provide a comprehensive selection of medical and healthcare services tailored to your unique needs, supporting you on your journey to optimal well-being."

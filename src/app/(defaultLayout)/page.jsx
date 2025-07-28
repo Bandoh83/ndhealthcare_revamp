@@ -232,14 +232,14 @@ export default function Home() {
       <Hero
         title="Comprehensive Home Healthcare You Can Trust"
         subTitle="From infant care to elderly support, we provide personalized, compassionate services right where you need them."
-        bgUrl="/images/home_1/hero_bg.jpeg"
+        bgUrl="/images/home_1/hero_bg.png"
         imgUrl={heroImage}
         // videoBtnText="See how we work"
         // videoUrl="https://www.youtube.com/embed/VcaAVWtP48A"
         infoList={[
           {
             title: 'Hotline',
-            subTitle: '0530610013',
+            subTitle: '024 823 3368',
             iconUrl: '/images/contact/icon_1.svg',
           },
           // {
@@ -258,13 +258,16 @@ export default function Home() {
       />
 
       {/* Start Feature Section */}
-      <Section topMd={200} topLg={150} topXl={110}>
+      <Section 
+      topMd={200} 
+      topLg={150} 
+      topXl={110}>
         <FeaturesSectionStyle4
           sectionTitle="Our Values"
           data={featureListData}
         />
       </Section>
-      {/* End Feature Section */}
+     
 
       {/* Start About Section */}
       <Section>
