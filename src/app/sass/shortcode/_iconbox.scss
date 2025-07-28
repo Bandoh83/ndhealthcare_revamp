@@ -331,18 +331,18 @@
     }
 
   }
-  &:hover {
-    .cs_iconbox_btn {
-      img {
-        &:first-child {
-          left: 150%;
-        }
-        &:last-child {
-          left: 50%;
-        }
-      }
-    }
-  }
+  // &:hover {
+  //   .cs_iconbox_btn {
+  //     img {
+  //       &:first-child {
+  //         left: 150%;
+  //       }
+  //       &:last-child {
+  //         left: 50%;
+  //       }
+  //     }
+  //   }
+  // }
 }
 .cs_iconbox.cs_style_4 {
   padding: 30px 110px 32px 40px;

@@ -11,7 +11,7 @@ export default function ContactInfoSection({ sectionTitle }) {
         <div className="col-xl-4">
           <IconBoxStyle11
             title="Phone"
-            subTitle="0530610013"
+            subTitle="024 823 3368"
             iconSrc="/images/contact/icon_1.svg"
           />
         </div>

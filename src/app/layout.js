@@ -22,7 +22,7 @@ export const metadata = {
   openGraph: {
     title: 'ND Healthcare',
     description: 'ND Healthcare',
-    images: ['/openGraphImage.jpeg'],
+    images: ['/openGraphImage.png'],
   },
 };
 

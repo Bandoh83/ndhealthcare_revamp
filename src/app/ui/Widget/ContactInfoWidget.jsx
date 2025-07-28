@@ -14,7 +14,7 @@ export default function ContactInfoWidget() {
         <i className="cs_accent_bg">
           <Icon icon="fluent:call-24-regular" />
         </i>
-        0530610013
+        024 823 3368
       </li>
       <li>
         <i className="cs_accent_bg">
