@@ -9,7 +9,7 @@ import TestimonialSection from '../ui/Section/TestimonialSection';
 import AppointmentSection from '../ui/Section/AppointmentSection';
 import FaqSection from '../ui/Section/FaqSection';
 import BrandsSection from '../ui/Section/BrandsSection';
-import WorkingProcess from '@/app/ui/Section/WorkingProcess';
+import WorkingProcess from '../ui/Section/WorkingProcess';
 import FeaturesSectionStyle5 from '../ui/Section/FeaturesSection/FeaturesSectionStyle5';
 // Large Images for blur placeholder
 import heroImage from '../../../public/images/home_1/hero_img.png';
@@ -30,19 +30,19 @@ import {
 
 const featureListData = [
   {
-    iconUrl: <HiHeart size={40} color="#ECB49D" />,
+    iconUrl: <HiHeart size={40} color="#FE4B06" />,
     title: 'Compassion',
     subTitle:
       'We believe in providing care with empathy, understanding, and kindness. We treat every individual as a member of our own family, offering not just assistance, but companionship and emotional support.',
   },
   {
-    iconUrl: <HiUserGroup size={40} color="#ECB49D" />,
+    iconUrl: <HiUserGroup size={40} color="#FE4B06" />,
     title: 'Respect',
     subTitle:
       'We respect the dignity, preferences, and privacy of every person we serve. We honor each individual’s unique needs and work with them and their families to ensure they receive personalized, respectful care.',
   },
   {
-    iconUrl: <HiShieldCheck size={40} color="#ECB49D" />,
+    iconUrl: <HiShieldCheck size={40} color="#FE4B06" />,
     title: 'Integrity',
     subTitle: `We are committed to acting with honesty and transparency in all our dealings. We maintain high ethical standards and ensure that our clients, their families, and our caregivers can always trust us to act in their best interests.`,
   },

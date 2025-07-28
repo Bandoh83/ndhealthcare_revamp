@@ -1,13 +1,11 @@
 "use client";
-import Section from "@/app/ui/Section";
-import AwardSectionStyle2 from "@/app/ui/Section/AwardSection/AwardSectionStyle2";
-import DepartmentSectionStyle2 from "@/app/ui/Section/DepartmentSection/DepartmentSectionStyle2";
-import BannerSectionStyle3 from "@/app/ui/Section/BannerSection/BannerSectionStyle3";
-import BannerSectionStyle4 from "@/app/ui/Section/BannerSection/BannerSectionStyle4";
-import FeaturesSectionStyle2 from "@/app/ui/Section/FeaturesSection/FeaturesSectionStyle2";
-import FunFactSection from "@/app/ui/Section/FunFactSection";
-import GallerySection from "@/app/ui/Section/GallerySection";
-import TeamSection from "@/app/ui/Section/TeamSection";
+import Section from "../../ui/Section";
+import DepartmentSectionStyle2 from "../../ui/Section/DepartmentSection/DepartmentSectionStyle2";
+import BannerSectionStyle3 from "../../ui/Section/BannerSection/BannerSectionStyle3";
+import FeaturesSectionStyle2 from "../../ui/Section/FeaturesSection/FeaturesSectionStyle2";
+import FunFactSection from "../../ui/Section/FunFactSection";
+import GallerySection from "../../ui/Section/GallerySection";
+import TeamSection from "../../ui/Section/TeamSection";
 
 import bannerImg from "../../../../public/images/about/banner_img.png";
 import whyChooseUsImg from "../../../../public//images/about/why_choose_us.jpeg";

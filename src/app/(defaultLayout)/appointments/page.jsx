@@ -1,8 +1,8 @@
 "use client"
 import React from 'react';
-import Section from '@/app/ui/Section';
-import AppointmentWithContactInfoSection from '@/app/ui/Section/AppointmentWithContactInfoSection';
-import BannerSectionStyle3 from '@/app/ui/Section/BannerSection/BannerSectionStyle3';
+import Section from '../../ui/Section';
+import AppointmentWithContactInfoSection from '../../ui/Section/AppointmentWithContactInfoSection';
+import BannerSectionStyle3 from '../../ui/Section/BannerSection/BannerSectionStyle3';
 
 import bannerImg from '../../../../public/images/appointments/banner_img.png'
 

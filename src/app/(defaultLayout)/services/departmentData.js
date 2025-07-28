@@ -1,4 +1,4 @@
-const departmentData = [
+export const departmentData = [ 
   {
     slug: 'full-support-services',
     imgUrl: '/images/departments/department_img.png',
@@ -102,4 +102,3 @@ const departmentData = [
   },
 ];
 
-export default departmentData;

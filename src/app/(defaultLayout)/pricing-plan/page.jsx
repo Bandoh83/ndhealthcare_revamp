@@ -1,14 +1,10 @@
 "use client"
 import React from 'react';
-import Section from '@/app/ui/Section';
-import BannerSectionStyle10 from '@/app/ui/Section/BannerSection/BannerSectionStyle10';
-import BannerSectionStyle3 from '@/app/ui/Section/BannerSection/BannerSectionStyle3';
-import FaqSectionStyle4 from '@/app/ui/Section/FaqSection/FaqSectionStyle4';
-import PricingSection from '@/app/ui/Section/PricingSection';
-
+import Section from '../../ui/Section';
+import BannerSectionStyle3 from '../../ui/Section/BannerSection/BannerSectionStyle3';
+import PricingSection from '../../ui/Section/PricingSection';
 import bannerImg from '../../../../public/images/pricing_plan/pricing.png'
-import bannerImgBtm from '../../../../public//images/pricing_plan/banner_img_2.png'
-import faqImg from '../../../../public/images/home_4/faq_img.jpeg'
+
 
 
 const pricingData = [

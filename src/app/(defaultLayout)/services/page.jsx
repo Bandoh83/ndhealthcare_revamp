@@ -1,13 +1,11 @@
-
 import React from 'react';
-import Section from '@/app/ui/Section';
-import BannerSectionStyle5 from '@/app/ui/Section/BannerSection/BannerSectionStyle5';
-import BannerSectionStyle6 from '@/app/ui/Section/BannerSection/BannerSectionStyle6';
-import DepartmentSectionStyle3 from '@/app/ui/Section/DepartmentSection/DepartmentSectionStyle3';
-import departmentData from './departmentData';
-import bannerImg from '../../../../public/images/departments/banner_img.png'
-import bannerImg2 from '../../../../public/images/departments/banner_img_2.png'
-
+import Section from '../../ui/Section';
+import BannerSectionStyle5 from '../../ui/Section/BannerSection/BannerSectionStyle5';
+import BannerSectionStyle6 from '../../ui/Section/BannerSection/BannerSectionStyle6';
+import DepartmentSectionStyle3 from '../../ui/Section/DepartmentSection/DepartmentSectionStyle3';
+import { departmentData } from './departmentData';
+import bannerImg from '../../../../public/images/departments/banner_img.png';
+import bannerImg2 from '../../../../public/images/departments/banner_img_2.png';
 
 export default function Services() {
   return (
@@ -21,7 +19,7 @@ export default function Services() {
       <Section bottomMd={140} bottomLg={100} bottomXl={60}>
         <DepartmentSectionStyle3 data={departmentData} />
       </Section>
-      
+
       <Section className="cs_footer_margin_0" bottomMd={140} bottomLg={100} bottomXl={60}>
         <BannerSectionStyle6
           imgUrl={bannerImg2}

@@ -1,9 +1,6 @@
 import React from 'react';
-import BannerSectionStyle5 from '@/app/ui/Section/BannerSection/BannerSectionStyle5';
-import ContactForm from '@/app/ui/ContactForm';
-import Section from '@/app/ui/Section';
-import ContactInfoSection from '@/app/ui/Section/ContactInfoSection';
-
+import BannerSectionStyle5 from '../../ui/Section/BannerSection/BannerSectionStyle5';
+import ContactForm from '../../ui/ContactForm';
 import bannerImg from '../../../../public/images/contact/banner_img.png';
 
 export default function Contact() {

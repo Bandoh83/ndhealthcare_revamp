@@ -1,11 +1,12 @@
-import { notFound } from 'next/navigation';
-import AboutSectionStyle2 from '@/app/ui/Section/AboutSection/AboutSectionStyle2';
-import AppointmentSection from '@/app/ui/Section/AppointmentSection';
-import Section from '@/app/ui/Section';
-import departmentData from '../departmentData';
+import { notFound } from "next/navigation";
+import { departmentData } from "../departmentData";
+import AboutSectionStyle2 from "../../../ui/Section/AboutSection/AboutSectionStyle2";
+import AppointmentSection from "../../../ui/Section/AppointmentSection/AppointmentSectionStyle2";
+import Section from "../../../ui/Section";
+import appointmentImage from "/public/images/home_1/appointment.jpg";
+import BreadcrumbStyle2 from "../../../ui/Breadcrumb/BreadcrumbStyle2";
 
-
-export function generateStaticParams() {
+export async function generateStaticParams() {
   return departmentData.map((service) => ({ slug: service.slug }));
 }
 
@@ -17,6 +18,7 @@ export default function ServiceDetails({ params }) {
 
   return (
     <>
+      <BreadcrumbStyle2 />
       <Section topMd={135}>
         <AboutSectionStyle2
           title={service.title}
@@ -24,16 +26,19 @@ export default function ServiceDetails({ params }) {
           imgUrl={service.imgUrl}
         />
       </Section>
-
       <Section
         topMd={190}
+        topLg={145}
+        topXl={105}
         bottomMd={190}
+        bottomLg={145}
+        bottomXl={110}
         id="appointment"
       >
         <AppointmentSection
           sectionTitle="Appointment"
           sectionTitleUp="BOOK AN"
-          imgUrl="/images/home_1/appointment.jpg"
+          imgUrl={appointmentImage}
           serviceName={service.title}
           servicePrice={service.price}
         />
