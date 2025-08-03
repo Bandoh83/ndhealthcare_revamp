@@ -31,14 +31,7 @@ export default function Footer() {
                 <MenuWidget data={menuDataOne} />
               </div>
             </div>
-            <div className="col-lg-4">
-              <div className="cs_footer_item">
-                <Newsletter
-                  title="Want to be part of out Partners?"
-                  subTitle="To get the latest news about health from our experts"
-                />
-              </div>
-            </div>
+
           </div>
         </div>
       </div>

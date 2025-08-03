@@ -46,6 +46,64 @@
     position: initial;
     z-index: initial;
   }
+
+  // Key Points Styling
+  .cs_hero_points {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    
+    .cs_hero_point {
+      display: flex;
+      align-items: center;
+      margin-bottom: 12px;
+      position: relative;
+      z-index: 1;
+      
+      .cs_hero_point_icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: black;
+        color: white;
+        margin-right: 12px;
+        flex-shrink: 0;
+        
+        svg {
+          width: 12px;
+          height: 12px;
+        }
+      }
+      
+      .cs_hero_point_text {
+        font-size: 16px;
+        font-weight: 500;
+        color: var(--heading-color, #333);
+        line-height: 1.4;
+      }
+      
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  
+  // Responsive adjustments
+  @media (max-width: 768px) {
+    .cs_hero_points {
+      margin-top: 20px;
+      
+      .cs_hero_point {
+        margin-bottom: 10px;
+        
+        .cs_hero_point_text {
+          font-size: 14px;
+        }
+      }
+    }
+  }
 }
 .cs_accordian_body_wrap {
   overflow: hidden;
@@ -361,4 +419,393 @@
 }
 .react-datepicker-wrapper {
   width: 100%;
+}
+
+
+
+
+
+.cs_partner_form_wrap {
+  .cs_partner_form {
+    padding: 50px 40px;
+    margin: 0 auto;
+    
+    .cs_form_row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      margin-bottom: 25px;
+      
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    
+    .cs_form_field {
+      &.cs_form_field_full {
+        grid-column: 1 / -1;
+      }
+      
+      &.cs_form_submit {
+        margin-top: 15px;
+      }
+    }
+    
+    .cs_form_label {
+      display: block;
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--heading-color, #333);
+      margin-bottom: 8px;
+      
+      .cs_required {
+        color: var(--accent-color, #007bff);
+        margin-left: 2px;
+      }
+    }
+    
+    .cs_form_field_input {
+      width: 100%;
+      padding: 15px 20px;
+      border: 2px solid #e8e8e8;
+      border-radius: 10px;
+      font-size: 16px;
+      color: var(--body-color, #666);
+      background-color: #fff;
+      transition: all 0.3s ease;
+      
+      &:focus {
+        outline: none;
+        border-color: var(--accent-color, #007bff);
+        box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+      }
+      
+      &::placeholder {
+        color: #aaa;
+      }
+      
+      &:disabled {
+        background-color: #f8f9fa;
+        cursor: not-allowed;
+      }
+    }
+    
+    .cs_btn {
+      padding: 18px 30px;
+      font-size: 16px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      
+      &:disabled {
+        opacity: 0.7;
+        cursor: not-allowed;
+        
+        &:hover {
+          transform: none;
+        }
+      }
+      
+      &:not(:disabled):hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(0, 123, 255, 0.3);
+      }
+    }
+  }
+  
+  // Responsive adjustments
+  @media (max-width: 768px) {
+    .cs_partner_form {
+      padding: 30px 25px;
+      
+      .cs_form_row {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        margin-bottom: 20px;
+      }
+      
+      .cs_form_field_input {
+        padding: 12px 15px;
+        font-size: 14px;
+      }
+      
+      .cs_btn {
+        padding: 15px 25px;
+        font-size: 14px;
+      }
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .cs_partner_form {
+      padding: 25px 20px;
+      
+      .cs_form_row {
+        gap: 15px;
+      }
+    }
+  }
+}
+
+// Form validation styles
+.cs_form_field_input {
+  &:invalid:not(:placeholder-shown) {
+    border-color: #dc3545;
+  }
+  
+  &:valid:not(:placeholder-shown) {
+    border-color: #28a745;
+  }
+}
+
+// Loading state for button
+.cs_btn {
+  &:disabled {
+    i {
+      opacity: 0;
+    }
+  }
+}
+
+
+
+
+.cs_core_values_horizontal {
+  padding: 50px;
+  
+  .cs_values_list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    align-items: center;
+  }
+  
+  .cs_value_item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 25px;
+    background: var(--gray-bg-1, #F5F5F5);
+    border-radius: 50px;
+    border-left: 4px solid var(--accent-color, #007bff);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    
+    &:hover {
+      background: var(--accent-color, #007bff);
+      color: white;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(0, 123, 255, 0.3);
+      
+      .cs_value_dot {
+        background: white !important;
+      }
+    }
+  }
+  
+  .cs_value_dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+  
+  .cs_value_name {
+    font-size: 18px;
+    font-weight: 600;
+    white-space: nowrap;
+    color: var(--heading-color, #333);
+    transition: color 0.3s ease;
+  }
+  
+  // Responsive design
+  @media (max-width: 992px) {
+    padding: 40px 30px;
+    
+    .cs_values_list {
+      gap: 30px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    padding: 30px 20px;
+    
+    .cs_values_list {
+      flex-direction: column;
+      gap: 20px;
+      align-items: stretch;
+    }
+    
+    .cs_value_item {
+      justify-content: center;
+      padding: 12px 20px;
+    }
+    
+    .cs_value_name {
+      font-size: 16px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    padding: 25px 15px;
+    
+    .cs_value_item {
+      padding: 10px 18px;
+      gap: 12px;
+    }
+    
+    .cs_value_dot {
+      width: 10px;
+      height: 10px;
+    }
+    
+    .cs_value_name {
+      font-size: 14px;
+    }
+  }
+}
+
+
+
+
+
+
+/* Features List */
+.cs_features_list {
+  flex-grow: 1;
+  margin-bottom: 2rem;
+}
+
+/* Button Wrapper */
+.cs_btn_wrapper {
+  margin-top: auto;
+}/* Clean Card Containers */
+.cs_pricing_card_container {
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.cs_pricing_card_container:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.cs_pricing_card_container.cs_popular_card {
+  border: 2px solid #e67e22;
+  box-shadow: 0 8px 30px rgba(230, 126, 34, 0.15);
+}
+
+.cs_pricing_card_container.cs_popular_card:hover {
+  box-shadow: 0 12px 40px rgba(230, 126, 34, 0.2);
+}
+
+/* Clean Borderless Pricing Cards */
+.cs_pricing_card_clean {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Popular Badge */
+.cs_popular_badge {
+  margin-bottom: 1rem;
+}
+
+.cs_badge {
+  display: inline-block;
+  border-radius: 25px;
+  font-weight: 500;
+}
+
+/* Colors */
+.cs_orange_color {
+  color: #e67e22 !important;
+}
+
+.cs_orange_bg {
+  background-color: #e67e22 !important;
+}
+
+.cs_gray_color {
+  color: #6c757d !important;
+}
+
+.cs_heading_color {
+  color: #2c3e50 !important;
+}
+
+.cs_white_color {
+  color: #ffffff !important;
+}
+
+/* Typography */
+.cs_fs_12 { font-size: 12px !important; }
+.cs_fs_14 { font-size: 14px !important; }
+.cs_fs_16 { font-size: 16px !important; }
+.cs_fs_28 { font-size: 28px !important; }
+.cs_fs_48 { font-size: 48px !important; }
+
+.cs_medium { font-weight: 500 !important; }
+.cs_semibold { font-weight: 600 !important; }
+.cs_bold { font-weight: 700 !important; }
+
+/* Check Circles */
+.cs_check_circle {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Button Styles */
+.cs_btn_orange {
+  background-color: #e67e22;
+  border: none;
+  color: white;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.cs_btn_orange:hover {
+  background-color: #d35400;
+  transform: translateY(-2px);
+}
+
+.cs_radius_25 {
+  border-radius: 25px !important;
+}
+
+/* Grid Layout */
+.cs_pricing_clean_grid {
+  margin: 0;
+}
+
+.cs_pricing_clean_grid .row {
+  margin: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .cs_fs_48 { 
+    font-size: 36px !important; 
+  }
+  
+  .cs_fs_28 { 
+    font-size: 24px !important; 
+  }
+  
+  .cs_pricing_card_clean {
+    padding: 2rem 1rem !important;
+  }
 }

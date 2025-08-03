@@ -15,6 +15,12 @@ export default function Hero({
   btnText,
   btnUrl,
 }) {
+  const keyPoints = [
+    "Licensed & Certified Healthcare Professionals",
+    "Available 24/7 for Emergency Home Visits",
+    "Serving Individuals, Families & Institutions"
+  ];
+
   return (
     <section className="cs_hero cs_style_1">
       <div
@@ -27,6 +33,24 @@ export default function Hero({
             <p className="cs_hero_subtitle cs_fs_20 cs_heading_color">
               {parse(subTitle)}
             </p>
+            
+            {/* Key Points Section */}
+            <div className="cs_hero_points">
+              {keyPoints.map((point, index) => (
+                <div className="cs_hero_point" key={index}>
+                  <div className="cs_hero_point_icon">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                      <path 
+                        d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" 
+                        fill="currentColor"
+                      />
+                    </svg>
+                  </div>
+                  <span className="cs_hero_point_text">{point}</span>
+                </div>
+              ))}
+            </div>
+            
             {/* <div className="cs_hero_btn_wrap">
               <VideoModal
                 videoUrl={videoUrl}

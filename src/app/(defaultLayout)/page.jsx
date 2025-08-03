@@ -11,6 +11,7 @@ import FaqSection from '../ui/Section/FaqSection';
 import BrandsSection from '../ui/Section/BrandsSection';
 import WorkingProcess from '../ui/Section/WorkingProcess';
 import FeaturesSectionStyle5 from '../ui/Section/FeaturesSection/FeaturesSectionStyle5';
+import PartnerFormSection from '../ui/Section/partnerFormSection';
 // Large Images for blur placeholder
 import heroImage from '../../../public/images/home_1/hero_img.png';
 import aboutImage from '../../../public/images/home_1/about.png';
@@ -234,8 +235,6 @@ export default function Home() {
         subTitle="From infant care to elderly support, we provide personalized, compassionate services right where you need them."
         bgUrl="/images/home_1/hero_bg.png"
         imgUrl={heroImage}
-        // videoBtnText="See how we work"
-        // videoUrl="https://www.youtube.com/embed/VcaAVWtP48A"
         infoList={[
           {
             title: 'Hotline',
@@ -289,9 +288,9 @@ export default function Home() {
       {/* End About Section */}
 
             {/* Start Award Section */}
-      <Section topMd={165} topLg={120} topXl={80}>
+      {/* <Section topMd={165} topLg={120} topXl={80}>
         <AwardSection sectionTitle="" data={awardData} />
-      </Section>
+      </Section> */}
       {/* End Award Section */}
 
 
@@ -312,20 +311,19 @@ export default function Home() {
       </Section>
 
       {/* Start Departments Section */}
- <Section
-        topMd={185}
-        topLg={140}
-        topXl={100}
-        bottomMd={200}
-        bottomLg={150}
-        bottomXl={100}
-        className="cs_gray_bg_1"
-      >
-        <FeaturesSectionStyle5
-          sectionTitle="How can a carer help me at home?"
-          data={helpData}
-        />
-      </Section>
+<Section
+  topMd={185}
+  topLg={140}
+  topXl={100}
+  bottomMd={200}
+  bottomLg={150}
+  bottomXl={100}
+  className="cs_gray_bg_1"
+>
+  <PartnerFormSection
+    sectionTitle="Become a Partner"
+  />
+</Section>
       {/* End Departments Section */}
 
 

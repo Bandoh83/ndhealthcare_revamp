@@ -5,109 +5,209 @@ import BannerSectionStyle3 from '../../ui/Section/BannerSection/BannerSectionSty
 import PricingSection from '../../ui/Section/PricingSection';
 import bannerImg from '../../../../public/images/pricing_plan/pricing.png'
 
-
-
 const pricingData = [
   {
-    title: 'Family Health Plan',
+    title: 'Full Support Services',
     subTitle:
-      'Nunc a convallis augue. Morbi imperdiet bibendum ultricies. Etiam eu congue est. Mauris sed nunc enim',
-    price: 'GHc 249',
+      'Comprehensive care including mobility assistance, stress management, and healthcare coordination for complete support.',
+    price: 'GHc 5,000',
     period: '/month',
     featureList: [
-      'Unlimited Consultations',
-      'Free Health Screenings',
-      '24/7 Medical Advice',
+      'Mobility Assistance',
+      'Stress, Anxiety and Depression Management',
+      'Coordination with Healthcare Providers',
+      '24/7 Support Available',
+    ],
+    btnText: 'Get Started',
+    btnUrl: '/contact',
+    popular: true,
+  },
+  {
+    title: 'Elderly Support Care',
+    subTitle:
+      'Specialized care for seniors including mobility support, medication reminders, and personal care assistance.',
+    price: 'GHc 4,000',
+    period: '/month',
+    featureList: [
+      'Mobility Assistance',
+      'Medication Reminders',
+      'Assistance with Medical Appointments',
+      'Personal Care Support (Bathing)',
+      'Stress & Depression Management',
     ],
     btnText: 'Get Started',
     btnUrl: '/contact',
     popular: false,
   },
   {
-    title: 'Wellness Plan',
+    title: 'Baby and Child Care',
     subTitle:
-      'Nunc a convallis augue. Morbi imperdiet bibendum ultricies. Etiam eu congue est. Mauris sed nunc enim.',
-    price: 'GHc 99',
+      'Dedicated childcare services including bathing, feeding support, and educational assistance for growing children.',
+    price: 'GHc 4,000',
     period: '/month',
     featureList: [
-      'Unlimited Check-ups',
-      'Discounts on Treatments',
-      'Annual Health Assessment',
-      'Wellness Workshops',
+      'Bathing & Personal Care',
+      'Meal Preparation & Feeding Support',
+      'Educational Assistance',
+      'Oral Care & Grooming',
     ],
     btnText: 'Get Started',
     btnUrl: '/contact',
     popular: false,
   },
   {
-    title: 'Senior Wellness Plan',
+    title: 'Autism Care',
     subTitle:
-      'Nunc a convallis augue. Morbi imperdiet bibendum ultricies. Etiam eu congue est. Mauris sed nunc enim.',
-    price: '$149',
+      'Specialized autism support with mobility exercises, speech therapy, and cognitive improvement activities.',
+    price: 'GHc 4,000',
     period: '/month',
     featureList: [
-      'Unlimited Check-ups',
-      'Discounts on Treatments',
-      'Annual Health Assessment',
-      'Wellness Workshops',
+      'Mobility Strengthening Exercises',
+      'Speech Therapy',
+      'Concentration & Memory Activities',
+      'Personal Care Assistance',
+      'Stress & Anxiety Management',
     ],
     btnText: 'Get Started',
     btnUrl: '/contact',
     popular: false,
   },
-
   {
-    title: 'Sports & Fitness Plan',
+    title: 'Dementia Care',
     subTitle:
-      'Optimized for athletes. Access sports injury assessments, physiotherapy, and expert advice for peak performance and recovery.',
-    price: '$119',
+      'Compassionate dementia care focused on creating safe environments and cognitive support activities.',
+    price: 'GHc 4,000',
     period: '/month',
     featureList: [
-      'Sports Injury Assessments',
-      'Physiotherapy Sessions',
-      'Sports Medicine Experts',
-      'Fitness Support',
+      'Safe & Familiar Environment Setup',
+      'Memory & Concentration Activities',
+      'Stress & Depression Management',
+      'Specialized Dementia Support',
+    ],
+    btnText: 'Get Started',
+    btnUrl: '/contact',
+    popular: false,
+  },
+  {
+    title: 'Live-In Care',
+    subTitle:
+      'Round-the-clock care with a dedicated caregiver residing in your home for constant support and supervision.',
+    price: 'GHc 4,000',
+    period: '/month',
+    featureList: [
+      '24/7 In-Home Caregiver',
+      'Round-the-Clock Support',
+      'Constant Care & Supervision',
+      'Personalized Care Plan',
+    ],
+    btnText: 'Get Started',
+    btnUrl: '/contact',
+    popular: false,
+  },
+  {
+    title: 'Post-Surgical Care',
+    subTitle:
+      'Specialized recovery support including mobility assistance, hygiene maintenance, and rehabilitation exercises.',
+    price: 'GHc 3,000',
+    period: '/month',
+    featureList: [
+      'Mobility Assistance',
+      'Personal Hygiene Maintenance',
+      'Minimal Exercise Support',
+      'Feeding Support When Necessary',
+      'Stress & Anxiety Management',
+    ],
+    btnText: 'Get Started',
+    btnUrl: '/contact',
+    popular: false,
+  },
+  {
+    title: 'Neurological Care',
+    subTitle:
+      'Specialized care for neurological conditions with focused rehabilitation and support services.',
+    price: 'GHc 2,000',
+    period: '/month',
+    featureList: [
+      'Specialized Neurological Support',
+      'Rehabilitation Assistance',
+      'Customized Care Plans',
+      'Professional Medical Coordination',
+    ],
+    btnText: 'Get Started',
+    btnUrl: '/contact',
+    popular: false,
+  },
+  {
+    title: 'Home Visits/Assessments',
+    subTitle:
+      'Professional home assessments and visits to evaluate care needs and provide targeted support services.',
+    price: 'GHc 2,000',
+    period: '/month',
+    featureList: [
+      'Professional Home Assessments',
+      'Care Need Evaluations',
+      'Customized Care Recommendations',
+      'Follow-up Visits',
+    ],
+    btnText: 'Get Started',
+    btnUrl: '/contact',
+    popular: false,
+  },
+  {
+    title: 'Physiotherapy',
+    subTitle:
+      'Professional in-house physiotherapy sessions designed to improve mobility, strength, and overall physical wellbeing.',
+    price: 'GHc 300',
+    period: '/session',
+    featureList: [
+      'In-House Physiotherapy Sessions',
+      'Mobility Improvement',
+      'Strength Building Exercises',
+      'Pain Management',
+      'Recovery Support',
     ],
     btnText: 'Get Started',
     btnUrl: '/contact',
     popular: false,
   },
 ];
+
 const faqData = [
   {
-    title: 'What services does Nd healthcare offer?',
+    title: 'What services does ND Healthcare offer?',
     content:
-      'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesent voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui.',
+      'ND Healthcare offers comprehensive care services including elderly care, autism care, dementia care, baby and child care, post-surgical care, neurological care, live-in care, physiotherapy, and full support services. All services can be customized based on your specific health condition and demands.',
   },
   {
-    title: 'How do I schedule an appointment with Nd healthcare?',
+    title: 'How do I schedule an appointment with ND Healthcare?',
     content:
-      'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesent voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui.',
+      'You can schedule an appointment by contacting us through our contact page or calling our office directly. We offer initial assessments for GHc 200 to evaluate your care needs and develop a personalized care plan.',
   },
   {
-    title: 'Do you accept insurance?',
+    title: 'What is included in the initial assessment?',
     content:
-      'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesent voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui.',
+      'Our initial assessment includes a comprehensive evaluation of your care needs, health condition review, and development of a customized care plan. This assessment costs GHc 200 and helps us determine the most appropriate services for your situation.',
   },
   {
-    title: 'What should I bring to my appointment?',
+    title: 'Can services be customized based on my needs?',
     content:
-      'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesent voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui.',
+      'Yes, absolutely! All our services can be customized based on your specific health condition and care demands. Our pricing rates can also be adjusted based on the complexity and specific requirements of your care needs.',
   },
   {
-    title: 'How do I request a prescription refill?',
+    title: 'Do you offer live-in care services?',
     content:
-      'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesent voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui.',
+      'Yes, we offer live-in care services where a dedicated caregiver resides in your home to provide round-the-clock support, constant care, and supervision. This arrangement ensures continuous care and peace of mind for families.',
   },
 ];
+
 export default function PricingPlan() {
   return (
     <>
       <BannerSectionStyle3
         bgUrl="/images/pricing_plan/hero_bg.png"
         imgUrl={bannerImg}
-        title="Find the Right Plan <br>for You"
-        subTitle="Explore Our Membership Options and Start Your Journey to Better Health"
+        title="Find the Right Care Plan <br>for You"
+        subTitle="Explore Our Comprehensive Healthcare Services and Start Your Journey to Better Health"
         // btnText="Get Starter"
         // btnUrl="/contact"
       />
@@ -120,22 +220,10 @@ export default function PricingPlan() {
         bottomXl={110}
       >
         <PricingSection
-          sectionTitle="Choose Your Nd healthcare <br />Membership Plan"
+          sectionTitle="Choose Your ND Healthcare <br />Service Plan"
           data={pricingData}
         />
       </Section>
-     
-      {/* <Section
-        topMd={200}
-        topLg={150}
-        topXl={110}
-        className="cs_footer_margin_0"
-      >
-        <BannerSectionStyle10
-          imgUrl={bannerImgBtm}
-          title="Choose Your Plan and Invest in Your Health Today!"
-        />
-      </Section> */}
     </>
   );
 }
