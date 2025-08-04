@@ -9,6 +9,7 @@ export default function AppointmentSectionStyle2({
   imgUrl,
   sectionTitle,
   sectionTitleUp,
+  serviceName
 
 }) {
   return (
@@ -23,7 +24,9 @@ export default function AppointmentSectionStyle2({
           <div className="col-lg-6">
             <SectionHeading title={sectionTitle} titleUp={sectionTitleUp} />
             <Spacing md="72" lg="50" />
-            <AppointmentForm />
+            <AppointmentForm
+            serviceType={serviceName}
+             />
           </div>
           <div className="col-lg-5 offset-lg-1 text-center">
             <Image src={imgUrl} alt="Appointment" className="cs_radius_30" placeholder='blur'/>

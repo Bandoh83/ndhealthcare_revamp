@@ -29,8 +29,8 @@ export default function Hero({
       >
         <div className="container">
           <div className="cs_hero_text">
-            <h1 className="cs_hero_title cs_fs_94">{parse(title)}</h1>
-            <p className="cs_hero_subtitle cs_fs_20 cs_heading_color">
+            <h1 className="cs_hero_title z-10 cs_orange_color">{parse(title)}</h1>
+            <p className="cs_hero_subtitle cs_fs_20 text-black">
               {parse(subTitle)}
             </p>
             
@@ -39,12 +39,14 @@ export default function Hero({
               {keyPoints.map((point, index) => (
                 <div className="cs_hero_point" key={index}>
                   <div className="cs_hero_point_icon">
+                  
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                       <path 
                         d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" 
                         fill="currentColor"
                       />
                     </svg>
+                    
                   </div>
                   <span className="cs_hero_point_text">{point}</span>
                 </div>

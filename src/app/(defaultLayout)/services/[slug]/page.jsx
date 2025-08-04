@@ -14,8 +14,11 @@ export default function ServiceDetails({ params }) {
   const { slug } = params;
   const service = departmentData.find((item) => item.slug === slug);
 
+
+
   if (!service) return notFound();
 
+  
   return (
     <>
       <BreadcrumbStyle2 />
