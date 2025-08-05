@@ -195,7 +195,7 @@
   }
   .cs_iconbox_number {
     font-size: 72px;
-    color: rgba($accent, 0.08);
+    color: rgba($ternary, 0.9);
     line-height: 1.14;
     position: absolute;
     left: 84px;
@@ -212,7 +212,7 @@
   .cs_iconbox_icon {
     height: 136px;
     width: 136px;
-    background: rgba($accent, 0.17);
+    background: rgba($accent, 0.9);
     margin-left: auto;
     transition: all 0.4s ease;
     padding: 25px;
@@ -308,7 +308,7 @@
   .cs_iconbox_btn {
     width: 90px;
     height: 70px;
-    background-color: rgba($accent, 0.5);
+    background-color: rgba($accent, 0.9);
     border-radius: 10px 0 20px 0;
     position: absolute;
     right: 0;
@@ -479,7 +479,7 @@
     top: 0;
     left: 0;
     border-radius: inherit;
-    background: linear-gradient(154deg, #d2eaef 0%, #86bbf1 100%);
+    // background: linear-gradient(154deg, #d2eaef 0%, #86bbf1 100%);
     height: 100%;
     width: 100%;
     transition: all 0.4s ease;
@@ -490,11 +490,11 @@
     position: relative;
     z-index: 2;
   }
-  &:hover {
-    &::before {
-      opacity: 1;
-    }
-  }
+  // &:hover {
+  //   &::before {
+  //     opacity: 1;
+  //   }
+  // }
 }
 .cs_iconbox.cs_style_8 {
   padding: 72px 41px 66px;
@@ -540,7 +540,7 @@
   }
 }
 .cs_iconbox.cs_style_9 {
-  background: linear-gradient(154deg, #d2eaef 0%, #86bbf1 100%);
+  // background: linear-gradient(154deg, #d2eaef 0%, #86bbf1 100%);
   padding: 40px 25px;
   transition: all 0.4s ease;
   margin-bottom: 24px;

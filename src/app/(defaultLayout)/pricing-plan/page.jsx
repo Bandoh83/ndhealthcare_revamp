@@ -5,7 +5,7 @@ import BannerSectionStyle3 from '../../ui/Section/BannerSection/BannerSectionSty
 import PricingSection from '../../ui/Section/PricingSection';
 import bannerImg from '../../../../public/images/pricing_plan/pricing.png'
 
-const pricingData = [
+export const pricingData = [
   {
     title: 'Full Support Services',
     subTitle:
@@ -19,7 +19,7 @@ const pricingData = [
       '24/7 Support Available',
     ],
     btnText: 'Get Started',
-    btnUrl: '/contact',
+    btnUrl: '#',
     popular: true,
   },
   {
@@ -36,7 +36,7 @@ const pricingData = [
       'Stress & Depression Management',
     ],
     btnText: 'Get Started',
-    btnUrl: '/contact',
+    btnUrl: '#',
     popular: false,
   },
   {

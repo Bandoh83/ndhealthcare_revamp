@@ -7,8 +7,8 @@ export default function IconBoxStyle10({ title, iconUrl, subTitle }) {
       <div className="cs_iconbox_icon cs_center rounded-circle">
         <div>{iconUrl}</div>
       </div>
-      <h2 className="cs_iconbox_title">{title}</h2>
-      <p className="cs_iconbox_subtitle mb-0">{subTitle}</p>
+      <h2 className="cs_iconbox_title cs_heading_color">{title}</h2>
+      <p className="cs_iconbox_subtitle cs_heading_color mb-0">{subTitle}</p>
     </div>
   );
 }

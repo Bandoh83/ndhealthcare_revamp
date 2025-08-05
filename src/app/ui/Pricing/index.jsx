@@ -61,8 +61,8 @@ export default function Pricing({
       {/* Button */}
       <div className="cs_btn_wrapper">
         <Button 
-          btnUrl={btnUrl} 
-          btnText={`${btnText} →`}
+          btnUrl="#" 
+          btnText={`${btnText} `}
           variant="cs_btn_orange cs_radius_25 w-100 py-3"
         />
       </div>

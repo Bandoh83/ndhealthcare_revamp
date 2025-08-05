@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 export default function IconBoxStyle6({ title, subTitle, iconUrl, href }) {
   return (
-    <div className="cs_iconbox cs_style_7">
+    <div className="cs_iconbox cursor-pointer cs_style_7">
       <div className="cs_iconbox_icon ">
         <Image src={iconUrl} alt="Icon" height={70} width={66} />
       </div>

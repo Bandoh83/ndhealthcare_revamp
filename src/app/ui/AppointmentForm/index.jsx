@@ -202,7 +202,7 @@ export default function AppointmentForm({serviceType}) {
                       onBlur={handleBlur}
                       name="service"
                     />
-                    <label className="cs_radio_label" htmlFor={option.id}>
+                    <label className="cs_radio_label cs_heading_color" htmlFor={option.id}>
                       {option.label}
                     </label>
                   </div>

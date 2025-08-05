@@ -46,7 +46,7 @@ export default function PartnerFormSection({ sectionTitle = "Become a Partner" }
       <div className="cs_shape_1" />
       <div className="container">
         <div className="cs_section_heading cs_style_1 text-center">
-          <h2 className="cs_section_title cs_fs_72 m-0">
+          <h2 className="cs_section_title cs_ternary_color cs_fs_72 m-0">
             <strong>{sectionTitle}</strong>
           </h2>
         </div>
@@ -157,7 +157,7 @@ export default function PartnerFormSection({ sectionTitle = "Become a Partner" }
                       <span>
                         {isSubmitting ? 'Submitting...' : 'Submit Partnership Request'}
                       </span>
-                      {!isSubmitting && (
+                      {/* {!isSubmitting && (
                         <i>
                           <svg width="16" height="11" viewBox="0 0 16 11" fill="none">
                             <path 
@@ -172,7 +172,7 @@ export default function PartnerFormSection({ sectionTitle = "Become a Partner" }
                             />
                           </svg>
                         </i>
-                      )}
+                      )} */}
                     </button>
                   </div>
                 </div>

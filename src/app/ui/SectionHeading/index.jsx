@@ -11,11 +11,11 @@ export default function SectionHeading({
 }) {
   return (
     <div
-      className={`cs_section_heading cs_style_1 ${center ? 'text-center' : ''}`}
+      className={`cs_section_heading cs_style_1  ${center ? 'text-center' : ''}`}
     >
       {titleUp && (
         <>
-          <h3 className="cs_section_subtitle text-uppercase cs_accent_color cs_semibold m-0 cs_accent_color cs_fs_32">
+          <h3 className="cs_section_subtitle text-uppercase cs_orange_color cs_semibold m-0 cs_accent_color cs_fs_32">
             {parse(titleUp)}
           </h3>
           <Spacing md="5" />
@@ -23,7 +23,7 @@ export default function SectionHeading({
       )}
 
       {title && (
-        <h2 className="cs_section_title cs_fs_72 m-0">{parse(title)}</h2>
+        <h2 className="cs_section_title cs_orange_color cs_fs_72 m-0">{parse(title)}</h2>
       )}
       {titleDown && (
         <>

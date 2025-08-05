@@ -16,12 +16,14 @@
     }
     &.active {
       background-color: #E9722B;
+      color: #fff;
       margin-left: 50px;
       @media (max-width: 991px) {
         margin-left: 0;
       }
       .cs_accordian_arrow {
         transform: rotate(180deg);
+        
       }
     }
   }
