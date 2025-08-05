@@ -93,12 +93,18 @@ const helpData = [
   },
 ];
 
+import nationWideImage from "../../../public/images/nationwide.png";
+import nhisImage from "../../../public/images/nhis.png";
+import redShotImage from "../../../public/images/redshot.png";
+import hefraImage from "../../../public/images/hefra.png";  
+import healthNetImage from "../../../public/images/healthnet.png";
+
 const brandData = [
-  { imgUrl: "/images/nationwide.png", imgAlt: "Brand" },
-  { imgUrl: "/images/nhis.png", imgAlt: "Brand" },
-  { imgUrl: "/images/redshot.png", imgAlt: "Brand" },
-  { imgUrl: "/images/hefra.png", imgAlt: "Brand" },
-  { imgUrl: "/images/healthnet.png", imgAlt: "Brand" },
+  { imgUrl: nationWideImage, imgAlt: "Brand" },
+  { imgUrl: nhisImage, imgAlt: "Brand" },
+  { imgUrl: redShotImage, imgAlt: "Brand" },
+  { imgUrl: hefraImage, imgAlt: "Brand" },
+  { imgUrl: healthNetImage, imgAlt: "Brand" },
 ];
 
 const workingProcessData = [

@@ -6,72 +6,73 @@ import React, { useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import * as Yup from "yup";
+import useAxios from "../../utils/useAxios";
+import swal from "sweetalert2";
 
-export default function AppointmentForm({serviceType}) {
+export default function AppointmentForm({ serviceType }) {
+  const api = useAxios();
   const allServiceOptions = [
     {
       id: "fullSupport",
-      value: "fullSupport",
+      value: "Full Support Services",
       label: "Full Support Services",
       rate: "5,000",
     },
     {
       id: "babyChildCare",
-      value: "babyChildCare",
+      value: "Baby and Child Care",
       label: "Baby and Child Care",
       rate: "4,000",
     },
     {
       id: "homeVisits",
-      value: "homeVisits",
+      value: "Home Visits/Assessments",
       label: "Home Visits/Assessments",
       rate: "2,000",
     },
     {
       id: "postSurgical",
-      value: "postSurgical",
+      value: "Post-Surgical Care",
       label: "Post-Surgical Care",
       rate: "3,000",
     },
     {
       id: "neurological",
-      value: "neurological",
+      value: "Neurological Care",
       label: "Neurological Care",
       rate: "2,000",
     },
-    { id: "autism", value: "autism", label: "Autism Care", rate: "4,000" },
+    { id: "autism", value: "Autism Care", label: "Autism Care", rate: "4,000" },
     {
       id: "dementia",
-      value: "dementia",
+      value: "Dementia Care",
       label: "Dementia Care",
       rate: "4,000",
     },
     {
       id: "elderly",
-      value: "elderly",
+      value: "Elderly Support Care",
       label: "Elderly Support Care",
       rate: "4,000",
     },
     {
       id: "bedridden",
-      value: "bedridden",
+      value: "Bedridden Care",
       label: "Bedridden Care",
       rate: "4,000",
     },
-    { id: "liveIn", value: "liveIn", label: "Live-in Care", rate: "4,000" },
+    { id: "liveIn", value: "Live-in Care", label: "Live-in Care", rate: "4,000" },
     {
       id: "physiotherapy",
-      value: "physiotherapy",
+      value: "Physiotherapy",
       label: "Physiotherapy",
       rate: "300 (per session)",
     },
   ];
 
-    const serviceOptions = serviceType
-    ? allServiceOptions.filter(option => option.label === serviceType)
+  const serviceOptions = serviceType
+    ? allServiceOptions.filter((option) => option.label === serviceType)
     : allServiceOptions;
-
-  console.log(serviceType)
 
   return (
     <Formik
@@ -81,7 +82,8 @@ export default function AppointmentForm({serviceType}) {
         description: "",
         date: "",
         time: "",
-       service: serviceOptions.length === 1 ? serviceOptions[0].value : "",
+        email: "",
+        service: serviceOptions.length === 1 ? serviceOptions[0].value : "",
       }}
       validationSchema={Yup.object({
         name: Yup.string().required("Required"),
@@ -90,9 +92,49 @@ export default function AppointmentForm({serviceType}) {
         date: Yup.date().required("Required"),
         time: Yup.string().required("Required"),
         service: Yup.string().required("Required"),
+        email: Yup.string().email("Invalid email address").required("Required"),
       })}
+      onSubmit={async (values, { resetForm }) => {
+        const { name, phone, description, date, time, service, email } = values;
+        // Here you can handle the form submission, e.g., send data to an API
+        console.log("Form submitted with values:", values);
+        try {
+          const response = await api.post("api/createappointment", {
+            name,
+            email,
+            phoneNumber: phone,
+            description,
+            preferredDate: date,
+            preferredTime: time,
+            service,
+          });
+          swal.fire({
+            title: "Appointment Request Submitted",
+            icon: "success",
+            toast: true,
+            timer: 3000,
+            position: "top-right",
+            timerProgressBar: true,
+            showConfirmButton: false,
+          });
+          console.log("Appointment request submitted successfully:", response.data);
+          resetForm();
+        } catch (error) {
+          console.error("Error submitting appointment request:", error);
+          swal.fire({
+            title: "Error",
+            text: "There was an error submitting your appointment request. Please try again later.",
+            icon: "error",
+            toast: true,
+            timer: 3000,
+            position: "top-right",
+            timerProgressBar: true,
+            showConfirmButton: false,
+          });
+        }
+      }}
     >
-      {({ handleChange, handleBlur, handleSubmit, setFieldValue, values }) => {
+      {({ handleChange, handleBlur, handleSubmit, setFieldValue, values, isSubmitting }) => {
         const selectedService = serviceOptions.find(
           (option) => option.value === values.service
         );
@@ -123,6 +165,20 @@ export default function AppointmentForm({serviceType}) {
                 placeholder="(123) 456 - 789"
                 value={values.phone}
                 name="phone"
+              />
+              <div className="cs_height_42 cs_height_xl_25" />
+            </div>
+            <div className="col-lg-12">
+              <label className="cs_input_label cs_heading_color">Email</label>
+              <input
+                type="email"
+                className="cs_form_field"
+                placeholder="pels@gmail.com"
+                onChange={handleChange}
+                onBlur={handleBlur}
+                value={values.email}
+                name="email"
+                required
               />
               <div className="cs_height_42 cs_height_xl_25" />
             </div>
@@ -202,7 +258,10 @@ export default function AppointmentForm({serviceType}) {
                       onBlur={handleBlur}
                       name="service"
                     />
-                    <label className="cs_radio_label cs_heading_color" htmlFor={option.id}>
+                    <label
+                      className="cs_radio_label cs_heading_color"
+                      htmlFor={option.id}
+                    >
                       {option.label}
                     </label>
                   </div>
@@ -224,8 +283,15 @@ export default function AppointmentForm({serviceType}) {
               <div className="cs_height_42 cs_height_xl_25" />
             </div>
             <div className="col-lg-12">
-              <button type="submit" className="cs_btn cs_style_1">
-                <span>Submit</span>
+              <button disabled={isSubmitting} type="submit" className="cs_btn cs_style_1">
+              {/* Using isSubmitting to disable the button during submission */}
+                {isSubmitting ? (
+                  <span>Submitting...</span>
+                  
+                ) : (
+                  <span>Submit</span>
+                )}
+
                 <i>
                   <Image
                     src="/images/icons/arrow_white.svg"

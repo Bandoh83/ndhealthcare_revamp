@@ -153,8 +153,10 @@ export default function About() {
         title="Welcome to <br /> ND Healthcare"
         subTitle="we provide compassionate, personalized homecare tailored to each individual's needs. Our dedicated team of doctors, nurses, and caregivers delivers high-quality support—from elderly and autism care to post-surgical and daily assistance—helping clients live with dignity and independence in the comfort of their homes."
       />
-
-      <WhoWeAreSection/>
+ <Section topMd={100} topLg={90} topXl={90}>
+    <WhoWeAreSection/>
+</Section>
+  
       <Section topMd={200} topLg={150} topXl={110}>
         <CoreValuesHorizontal
           sectionTitle="Our Core Values"
