@@ -1,6 +1,7 @@
 "use client"
 import React from 'react';
 import Slider from 'react-slick';
+import Image from 'next/image';
 
 export default function BrandsCarousel({ data }) {
   const settings = {
@@ -50,7 +51,7 @@ export default function BrandsCarousel({ data }) {
       {data?.map((item, index) => (
         <div key={index}>
           <div className="cs_brands cs_style_2">
-            <img src={item.imgUrl} alt={item.imgAlt} />
+            <Image src={item.imgUrl} alt={item.imgAlt} />
           </div>
         </div>
       ))}

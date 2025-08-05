@@ -11,7 +11,7 @@ export default function ListStyle2({ heading, iconUrl, data }) {
       <ul className="cs_mp0 cs_heading_color">
         {data?.map((item, index) => (
           <li key={index}>
-            <img src={item.iconUrl} alt="Icon" />
+            <Image src={item.iconUrl} alt="Icon" />
             {item.title}
           </li>
         ))}

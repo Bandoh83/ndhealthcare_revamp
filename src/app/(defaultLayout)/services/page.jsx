@@ -20,13 +20,13 @@ export default function Services() {
         <DepartmentSectionStyle3 data={departmentData} />
       </Section>
 
-      <Section className="cs_footer_margin_0" bottomMd={140} bottomLg={100} bottomXl={60}>
+      {/* <Section className="cs_footer_margin_0" bottomMd={140} bottomLg={100} bottomXl={60}>
         <BannerSectionStyle6
           imgUrl={bannerImg2}
           title="Don’t Let Your Health Take a Backseat!"
-          subTitle="Schedule an appointment with one of our <br />experienced medical professionals today!"
+          subTitle="Schedule an appointment and <br />experienced the best healthcare"
         />
-      </Section>
+      </Section> */}
     </>
   );
 }

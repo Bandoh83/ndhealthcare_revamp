@@ -172,7 +172,7 @@ export default function Header({ logoSrc, variant }) {
     {/* Become a Caregiver Section */}
     <div className="cs_caregiver_section">
       <h4 className="cs_fs_20 cs_semibold mb-3">Become a Caregiver</h4>
-      <p className="cs_fs_16 mb-3">Join our team of dedicated caregivers and make a difference in people's lives.</p>
+      <p className="cs_fs_16 mb-3">Join our team of dedicated caregivers and make a difference in people`&apos;`s lives.</p>
       <a 
         href="https://docs.google.com/forms/d/e/1FAIpQLSfLpXtFUleXIhim8iQD266M46eirAoOCqWC9nVw1FBUiCplwA/alreadyresponded?pli=1&pli=1"
         target="_blank"

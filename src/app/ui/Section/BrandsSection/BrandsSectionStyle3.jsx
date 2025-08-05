@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 export default function BrandsSectionStyle3({ data }) {
   return (
@@ -7,7 +8,7 @@ export default function BrandsSectionStyle3({ data }) {
         <div className="cs_brands cs_style_3 cs_radius_20">
           {data?.map((item, index) => (
             <div className="cs_brand" key={index}>
-              <img src={item.imgUrl} alt={item.imgAlt} />
+              <Image src={item.imgUrl} alt={item.imgAlt} />
             </div>
           ))}
         </div>
