@@ -9,7 +9,7 @@ export default function AppointmentFormStyle2() {
     >
       <div className="cs_appointment_form_field">
         <div className="cs_appointment_form_icon cs_center rounded-circle cs_white_bg">
-          <img src="/images/home_4/appointment_icon_1.svg" alt="Icon" />
+          <Image src="/images/home_4/appointment_icon_1.svg" alt="Icon" />
         </div>
         <div className="cs_appointment_form_field_right">
           <label>Date</label>
@@ -18,7 +18,7 @@ export default function AppointmentFormStyle2() {
       </div>
       <div className="cs_appointment_form_field">
         <div className="cs_appointment_form_icon cs_center rounded-circle cs_white_bg">
-          <img src="/images/home_4/appointment_icon_2.svg" alt="Icon" />
+          <Image src="/images/home_4/appointment_icon_2.svg" alt="Icon" />
         </div>
         <div className="cs_appointment_form_field_right">
           <label>Specialization</label>
@@ -27,7 +27,7 @@ export default function AppointmentFormStyle2() {
       </div>
       <div className="cs_appointment_form_field">
         <div className="cs_appointment_form_icon cs_center rounded-circle cs_white_bg">
-          <img src="/images/home_4/appointment_icon_3.svg" alt="Icon" />
+          <Image src="/images/home_4/appointment_icon_3.svg" alt="Icon" />
         </div>
         <div className="cs_appointment_form_field_right">
           <label>Contact Number</label>

@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 const WhoWeAreSection = () => {
   return (
@@ -29,7 +30,7 @@ const WhoWeAreSection = () => {
           <div className="relative">
             {/* Main image container */}
             <div className="relative bg-white rounded-3xl shadow-2xl p-4 transform rotate-2 hover:rotate-0 transition-transform duration-500">
-              <img 
+              <Image 
                 src="/images/about/senior_nurse.png" 
                 alt="ND Healthcare Team"
                 className="w-full h-64 md:h-80 object-cover rounded-2xl"

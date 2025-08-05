@@ -17,7 +17,7 @@ export default function BrandsSection({ data, sectionTitle }) {
       <div className="cs_brands cs_style_1">
         {data.map((item, index) => (
           <div className="cs_brand cs_center" key={index}>
-            <img src={item.imgUrl} alt={item.imgAlt} />
+            <Image src={item.imgUrl} alt={item.imgAlt} />
           </div>
         ))}
       </div>

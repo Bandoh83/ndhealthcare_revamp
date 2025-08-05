@@ -27,6 +27,7 @@ export default function ServiceDetails({ params }) {
           title={service.title}
           subTitle={service.subTitle}
           imgUrl={service.imgUrl}
+          points={service.points}
         />
       </Section>
       <Section
