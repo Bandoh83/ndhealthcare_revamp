@@ -26,6 +26,7 @@
     "react-slick": "^0.30.1",
     "react-water-wave": "^2.0.1",
     "sass": "^1.70.0",
+    "sharp": "^0.34.3",
     "slick-carousel": "^1.8.1",
     "sweetalert": "^2.1.2",
     "sweetalert2": "^11.22.2",

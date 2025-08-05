@@ -1,5 +1,6 @@
 import { Figtree, Poppins } from 'next/font/google';
 import './sass/index.scss';
+import SearchParamWrapper from './SearchParamWrapper';
 
 const figtree = Figtree({
   subsets: ['latin'],
@@ -35,7 +36,9 @@ export default function RootLayout({ children }) {
         <link rel="icon" href="/favicon.ico" sizes="any" />
       </head>
       <body className={`${figtree.variable} ${poppins.variable}`}>
+      <SearchParamWrapper>
         {children}
+        </SearchParamWrapper>
       </body>
     </html>
   );

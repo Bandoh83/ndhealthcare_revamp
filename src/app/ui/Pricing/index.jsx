@@ -3,14 +3,14 @@ import Button from '../Button';
 import { Icon } from '@iconify/react';
 
 export default function Pricing({
-  title,
-  subTitle,
-  price,
-  period,
-  featureList,
-  btnText,
-  btnUrl,
-  popular,
+  title = '',
+  subTitle = '',
+  price = '',
+  period = '',
+  featureList = [],
+  btnText = 'Get Started',
+  btnUrl = '#',
+  popular = false
 }) {
   return (
     <div className={`cs_pricing_card_container ${popular ? 'cs_popular_card' : ''}`}>
