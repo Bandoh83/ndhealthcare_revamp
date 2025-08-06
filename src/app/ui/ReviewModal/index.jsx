@@ -39,7 +39,7 @@ const ReviewModal = ({ isOpen, onClose, onSubmit }) => {
       testimonial: reviewText,
       rating,
       imgSrc: avatarPreview || "/images/home_1/avatar_3.png",
-      avatarFile // Include the file object if you need to upload it
+      avatarFile
     });
     setName("");
     setLocation("");
