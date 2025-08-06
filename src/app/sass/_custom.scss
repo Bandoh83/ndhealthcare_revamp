@@ -588,12 +588,12 @@
     padding: 15px 25px;
     background: var(--gray-bg-1, #F5F5F5);
     border-radius: 50px;
-    border-left: 4px solid var(--accent-color, #007bff);
+    border-left: 4px solid var(--accent-color, #f0c39f);
     transition: all 0.3s ease;
     cursor: pointer;
     
     &:hover {
-      background: var(--accent-color, #007bff);
+      background: var(--accent-color, #f0c39f);
       color: white;
       transform: translateY(-2px);
       box-shadow: 0 8px 25px rgba(0, 123, 255, 0.3);

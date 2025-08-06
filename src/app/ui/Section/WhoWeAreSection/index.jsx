@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import seniorNurseImage from "/public/images/about/senior_nurse.png";
+import seniorNurseImage from "/public/images/about/senior_nurse.jpg";
 import Spacing from "../../Spacing";
 
 const WhoWeAreSection = () => {
