@@ -1,44 +1,98 @@
-import React, { useState } from 'react';
+import useAxios from "@/app/utils/useAxios";
+import { subtle } from "crypto";
+import React, { useState } from "react";
+import swal from "sweetalert";
 
-export default function PartnerFormSection({ sectionTitle = "Become a Partner" }) {
+export default function PartnerFormSection({
+  sectionTitle = "Become a Partner",
+}) {
   const [formData, setFormData] = useState({
-    name: '',
-    institution: '',
-    role: '',
-    email: '',
-    contact: ''
+    name: "",
+    institution: "",
+    role: "",
+    email: "",
+    contact: "",
   });
+
+  const api = useAxios();
 
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
-      [name]: value
+      [name]: value,
     }));
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     // Add your form submission logic here
-    console.log('Form submitted:', formData);
-    
-    // Simulate API call
-    setTimeout(() => {
-      setIsSubmitting(false);
-      alert('Thank you! We will get back to you soon.');
-      // Reset form
-      setFormData({
-        name: '',
-        institution: '',
-        role: '',
-        email: '',
-        contact: ''
+    if (
+      !formData.name ||
+      !formData.institution ||
+      !formData.role ||
+      !formData.email ||
+      !formData.contact
+    ) {
+      swal.fire({
+        title: "Error",
+        text: "Please fill in all required fields.",
+        icon: "error",
+        toast: true,
+        timer: 3000,
+        position: "top-right",
+        timerProgressBar: true,
+        showConfirmButton: false,
       });
-    }, 1000);
+      setIsSubmitting(false);
+      return;
+    }
+
+    // Simulate API call
+    try {
+       await api.post("partner/create", {
+        name: formData.name,
+        institution: formData.institution,
+        role: formData.role,
+        email: formData.email,
+        phoneNumber: formData.contact,
+      });
+
+      swal.fire({
+        title: "Partnership Request Submitted",
+        subtitle: "Thank you for your interest in partnering with us!",
+        icon: "success",
+        toast: true,
+        timer: 3000,
+        position: "top-right",
+        timerProgressBar: true,
+        showConfirmButton: false,
+      });
+      setFormData({
+        name: "",
+        institution: "",
+        role: "",
+        email: "",
+        contact: "",
+      });
+    } catch (error) {
+      swal.fire({
+        title: "Error",
+        text: "There was an error submitting your request. Please try again later.",
+        icon: "error",
+        toast: true,
+        timer: 3000,
+        position: "top-right",
+        timerProgressBar: true,
+        showConfirmButton: false,
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -51,12 +105,14 @@ export default function PartnerFormSection({ sectionTitle = "Become a Partner" }
           </h2>
         </div>
         <div className="cs_height_72 cs_height_lg_50" />
-        
+
         <div className="cs_partner_form_wrap">
           <div className="row justify-content-center">
             <div className="col-lg-10 col-xl-8">
-              <form onSubmit={handleSubmit} className="cs_partner_form cs_white_bg cs_radius_25 cs_shadow_1">
-                
+              <form
+                onSubmit={handleSubmit}
+                className="cs_partner_form cs_white_bg cs_radius_25 cs_shadow_1"
+              >
                 {/* First Row - Name & Institution */}
                 <div className="cs_form_row">
                   <div className="cs_form_field">
@@ -149,13 +205,15 @@ export default function PartnerFormSection({ sectionTitle = "Become a Partner" }
                 {/* Submit Button Row */}
                 <div className="cs_form_row">
                   <div className="cs_form_field cs_form_field_full cs_form_submit">
-                    <button 
-                      type="submit" 
+                    <button
+                      type="submit"
                       className="cs_btn cs_style_1 w-100"
                       disabled={isSubmitting}
                     >
                       <span>
-                        {isSubmitting ? 'Submitting...' : 'Submit Partnership Request'}
+                        {isSubmitting
+                          ? "Submitting..."
+                          : "Submit  Request"}
                       </span>
                       {/* {!isSubmitting && (
                         <i>
