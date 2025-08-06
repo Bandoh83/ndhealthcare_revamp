@@ -183,13 +183,13 @@ export default function About() {
       {/* <Section topMd={190} topLg={145} topXl={105}>
         <TeamSection sectionTitleUp="Meet Our Team" data={teamData} />
       </Section> */}
-      <Section topMd={170} topLg={120} topXl={80} bottomLg={150}>
+      {/* <Section topMd={170} topLg={120} topXl={80} bottomLg={150}>
         <GallerySection
           sectionTitle="Our Facilities and <br />Latest Activities"
           sectionTitleUp="HAVE A LOOK AT"
           data={galleryData}
         />
-      </Section>
+      </Section> */}
       {/* <Section
         topMd={190}
         topLg={145}

@@ -9,27 +9,35 @@ import ReviewModal from "@/app/ui/ReviewModal";
 export default function TestimonialSection({ sectionTitle, sectionTitleDown }) {
   const [reviews, setReviews] = useState([
     {
-      name: "PAULO HUBERT",
-      location: "New York, USA",
-      imgSrc: "/images/home_1/avatar_1.png",
+      name: "Dorcas Ntiamoah",
+      location: "Koforidua",
+      imgSrc: "/images/home_1/avatar_3.jpg",
       testimonial:
-        "I recently had to bring my child to Nd healthcare for a minor injury, and I was so impressed with the care he received. The pediatrician was great with him and made him feel at ease, and the entire staff was kind and attentive.",
+        "I’ve had an amazing experience with ND Healthcare. The staff are not only professional but also incredibly warm and attentive. From the front desk to the clinical team, everyone made me feel heard and cared for. It's clear that patient well-being is their top priority. Highly recommend!",
       rating: 5,
     },
     {
-      name: "LAURENCE VENDETTA",
-      location: "Florida",
-      imgSrc: "/images/home_1/avatar_2.png",
+      name: "Chirag Patel",
+      location: "Accra",
+      imgSrc: "/images/home_1/avatar_3.jpg",
       testimonial:
-        "The pediatrician was great with him and made him feel at ease, and the entire staff was kind and attentive. I recently had to bring my child to Nd healthcare for a minor injury, and I was so impressed with the care he received.",
+        "Finding a trustworthy nanny can be difficult, but ND Healthcare made the process smooth and reassuring. The nanny assigned to our family was punctual, loving, and highly trained in child care and safety.",
       rating: 4.5,
     },
     {
-      name: "CASSANDRA RAUL",
-      location: "Florida",
-      imgSrc: "/images/home_1/avatar_3.png",
+      name: "Afi Quarshie",
+      location: "Kumasi",
+      imgSrc: "/images/home_1/avatar_3.jpg",
       testimonial:
-        "I was so impressed with the care he received. The pediatrician was great with him and made him feel at ease, and the entire staff was kind and attentive. I recently had to bring my child to Nd healthcare for a minor injury, and I was so impressed with the care he received.",
+        "The staff are knowledgeable, empathetic, and always willing to go the extra mile. If you’re looking for a healthcare partner that treats you like family, this is it.",
+      rating: 4.5,
+    },
+    {
+      name: "Lina AbiRafeh",
+      location: "Accra",
+      imgSrc: "/images/home_1/avatar_3.jpg",
+      testimonial:
+        "The nanny connected with our child immediately and maintained a balance of fun and discipline. It gave us peace of mind knowing our child was in good hands while we worked. I highly recommend NDH’s nanny services to any parent looking for reliable and professional care at home..",
       rating: 4.5,
     },
   ]);
@@ -50,8 +58,9 @@ export default function TestimonialSection({ sectionTitle, sectionTitleDown }) {
       <Spacing md="72" lg="50" />
       <Testimonial reviews={reviews} />
       <Spacing md="72" lg="50" />
-      <button 
-        className="cs_btn cs_style_1" 
+      <button
+        style={{ textAlign: "right", float: "right" }}
+        className="cs_btn cs_style_1"
         onClick={() => setIsModalOpen(true)}
       >
         <span>Add Review</span>
@@ -59,7 +68,7 @@ export default function TestimonialSection({ sectionTitle, sectionTitleDown }) {
           <FaPlus />
         </span>
       </button>
-      
+
       <ReviewModal
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}

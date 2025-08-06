@@ -103,57 +103,52 @@ export default function Home() {
       </Section>
 
       {/* Start Departments Section */}
-      <Section
-        topMd={120}
-        topLg={140}
-        topXl={100}
-        bottomMd={200}
-        bottomLg={150}
-        bottomXl={110}
-      >
-        {/* <PricingSection
-          sectionTitle="Service Pricing"
-          data={pricingData.slice(0, 3)}
-        /> */}
+<Section
+  topMd={90}
+  topLg={50}
+  topXl={70}
+  bottomMd={180}
+  bottomLg={130}
+  bottomXl={90}
+>
+  {/* <PricingSection
+    sectionTitle="Service Pricing"
+    data={pricingData.slice(0, 3)}
+  /> */}
 
-        <div className="container">
-          <SectionHeading title="Service Pricing" center />
-          <Spacing md="72" lg="50" />
+  <div className="container">
+    <SectionHeading title="Service Pricing" center />
+    <Spacing md="72" lg="50" />
 
-          {/* Clean Grid Layout */}
-          <div className="cs_pricing_clean_grid">
-            <div className="row g-4">
-              {pricingData.slice(0, 3).map((item, index) => (
-                <div key={index} className="col-lg-4 col-md-6">
-                  <div className="h-100">
-                    <Link href="/pricing-plan" className="col-lg-4 col-md-6">
-                      <Pricing {...item} />
-                    </Link>
-                  </div>
-                </div>
-              ))}
+    {/* Clean Grid Layout */}
+    <div className="cs_pricing_clean_grid">
+      <div className="row g-4">
+        {pricingData.slice(0, 3).map((item, index) => (
+          <div key={index} className="col-lg-4 col-md-6">
+            <div className="h-100">
+              <Link href="/pricing-plan" className="col-lg-4 col-md-6">
+                <Pricing {...item} />
+              </Link>
             </div>
           </div>
-          
-        </div>
-      </Section>
-      <Section
-        topMd={185}
-        topLg={140}
-        topXl={100}
-        bottomMd={200}
-        bottomLg={150}
-        bottomXl={100}
-        className="cs_gray_bg_1"
-      >
-        <PartnerFormSection sectionTitle="Become a Partner" />
-      </Section>
+        ))}
+      </div>
+    </div>
+    
+    <div className="text-center mt-4">
+      <Link href="/pricing-plan" className="cs_link cs_color_orange">
+        View More Pricing Plans
+      </Link>
+    </div>
+  </div>
+</Section>
+     
       {/* End Departments Section */}
 
       {/* Start Testimonial */}
       <Section
-        topMd={185}
-        topLg={140}
+        topMd={165}
+        topLg={10}
         topXl={100}
         bottomMd={200}
         bottomLg={150}
@@ -187,17 +182,19 @@ export default function Home() {
       </Section>
       {/* End Appointment Section */}
 
-      {/* Start FAQ Section */}
-      <Section topMd={190} topLg={145} topXl={105}>
-        <FaqSection
-          data={faqData}
-          sectionTitle="Usually Ask"
-          sectionTitleUp="What People"
-        />
-      </Section>
-      {/* End FAQ Section */}
 
       {/* Start Brand Section */}
+       <Section
+        topMd={185}
+        topLg={140}
+        topXl={100}
+        bottomMd={200}
+        bottomLg={150}
+        bottomXl={100}
+        className="cs_gray_bg_1"
+      >
+        <PartnerFormSection sectionTitle="Become a Partner" />
+      </Section>
       <Section
         topMd={190}
         topLg={145}
@@ -208,7 +205,15 @@ export default function Home() {
       >
         <BrandsSection data={brandData} sectionTitle="Our Partners" />
       </Section>
-      {/* End Brand Section */}
+
+        <Section topMd={10} topLg={15} topXl={15} bottomMd={80} bottomLg={130} bottomXl={90}>
+        <FaqSection
+          data={faqData}
+          sectionTitle="Usually Ask"
+          sectionTitleUp="What People"
+        />
+      </Section>
+    
     </>
   );
 }

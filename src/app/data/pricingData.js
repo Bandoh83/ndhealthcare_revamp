@@ -256,67 +256,56 @@ export const brandData = [
 
 export const workingProcessData = [
   {
-    title: "Book Appointment",
+    title: "Call Us with a Brief Description of Your Needs",
     subTitle:
-      "You can schedule an appointment with us by calling our office, completing our online form, or using our mobile application.",
-    iconUrl: "/images/home_2/wording_process_icon_1.svg",
+      "Reach out to our care coordination team via phone. Share a short summary of your condition or the type of homecare support you're looking for.",
+    iconUrl: "/images/home_2/wording_process_icon_3.svg",
     number: "01",
   },
   {
-    title: "Visit Our Facility",
+    title: "Schedule an Assessment",
     subTitle:
-      "On the day of your visit, please arrive at our facility at your scheduled time. Our team will welcome you and assist with the check-in process.",
-    iconUrl: "/images/home_2/wording_process_icon_2.svg",
+      "We’ll arrange a convenient time for an in-person assessment. This helps us understand your needs in detail and recommend the right care plan.",
+    iconUrl: "/images/home_2/wording_process_icon_1.svg",
     number: "02",
   },
   {
-    title: "Meet with Our Healthcare <br />Professionals",
+    title: "Make Payment",
     subTitle:
-      "If needed, we’ll arrange any follow-up visits, tests, or procedures to make sure you receive the highest quality care.",
-    iconUrl: "/images/home_2/wording_process_icon_3.svg",
+      "Once the care plan is agreed upon, payment can be made to confirm the service.",
+    iconUrl: "/images/home_2/wording_process_icon_5.svg",
     number: "03",
   },
   {
-    title: "Follow-up Care",
+    title: "Service Begins",
     subTitle:
-      "We will schedule any necessary follow-up <br />appointments, tests, or procedures to ensure <br />that you receive the best possible care.",
+      "Our qualified caregivers or nurses will begin providing care at your home as scheduled.",
     iconUrl: "/images/home_2/wording_process_icon_4.svg",
     number: "04",
   },
-  {
-    title: "Billing",
-    subTitle:
-      "We work with most major insurance providers, and our billing team is available to help you understand your coverage and any personal costs.",
-    iconUrl: "/images/home_2/wording_process_icon_5.svg",
-    number: "05",
-  },
+
 ];
 
 export const faqData = [
   {
-    title: "What services does ND Healthcare offer?",
-    content:
-      "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesent voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui.",
-  },
-  {
-    title: "How do I schedule an appointment",
-    content:
-      "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesent voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui.",
-  },
-  {
     title: "Do you accept insurance?",
     content:
-      "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesent voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui.",
+      "Yes, we do. We accept coverage through our partnered insurance providers.",
   },
   {
-    title: "What should I bring to my appointment?",
+    title: "Where is the assessment conducted?",
     content:
-      "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesent voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui.",
+      "Assessments are carried out wherever the client feels most comfortable be it at home, the office, or any preferred location. We come to you.",
   },
   {
-    title: "How do I request a prescription refill?",
+    title: "Do you offer a payment plan?",
     content:
-      "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesent voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui.",
+      "Absolutely. We believe everyone should have access to our services, so we offer flexible payment plans to suit your needs.",
+  },
+  {
+    title: "Are your caregivers qualified?",
+    content:
+      "Yes, all our staff are certified, experienced, and carefully vetted to ensure you receive professional and compassionate care.",
   },
 ];
 
