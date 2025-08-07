@@ -24,7 +24,7 @@ export default function ContactForm() {
           </h4>
           <div className="cs_height_18" />
           <p className="cs_section_subtitle">
-            We're here to help Reach out to us and we'll get back to you as soon
+            We&apos;re here to help Reach out to us and we&apos;ll get back to you as soon
             as possible.
           </p>
           <div className="cs_height_55" />
