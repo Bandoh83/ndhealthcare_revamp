@@ -8,7 +8,7 @@ import GallerySection from "../../ui/Section/GallerySection";
 import TeamSection from "../../ui/Section/TeamSection";
 import CoreValuesHorizontal from "../../ui/Section/CoreValuesHorizontal";
 import bannerImg from "../../../../public/images/about/banner_img.png";
-import whyChooseUsImg from "../../../../public//images/about/why_choose_us.jpg";
+import whyChooseUsImg from "../../../../public//images/about/why_choose_us.png";
 import AwardSection from "../../ui/Section/AwardSection";
 import { GiMedicines } from "react-icons/gi";
 import { CarOutlined, HeartOutlined } from "@ant-design/icons";

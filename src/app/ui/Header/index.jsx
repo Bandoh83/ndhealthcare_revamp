@@ -50,7 +50,7 @@ export default function Header({ logoSrc, variant }) {
                       <Link
                         href="/"
                         onClick={() => setMobileToggle(false)}
-                        style={{ color: "#E9722B" }}
+                        style={{ color: "${accent}" }}
                       >
                         Home
                       </Link>
@@ -59,7 +59,7 @@ export default function Header({ logoSrc, variant }) {
                       <Link
                         href="/about"
                         onClick={() => setMobileToggle(false)}
-                        style={{ color: "#E9722B" }}
+                        style={{ color: "${accent}"  }}
                       >
                         About Us
                       </Link>
@@ -68,7 +68,7 @@ export default function Header({ logoSrc, variant }) {
                       <Link
                         href="/services"
                         onClick={() => setMobileToggle(false)}
-                        style={{ color: "#E9722B" }}
+                        style={{ color: "${accent}"  }}
                       >
                         Our Services
                       </Link>
@@ -77,7 +77,7 @@ export default function Header({ logoSrc, variant }) {
                       <Link
                         href="/pricing-plan"
                         onClick={() => setMobileToggle(false)}
-                        style={{ color: "#E9722B" }}
+                        style={{ color: "${accent}"  }}
                       >
                         Pricing
                       </Link>
@@ -86,7 +86,7 @@ export default function Header({ logoSrc, variant }) {
                       <Link
                         href="/contact"
                         onClick={() => setMobileToggle(false)}
-                        style={{ color: "#E9722B" }}
+                        style={{ color: "${accent}"  }}
                       >
                         Contact
                       </Link>
