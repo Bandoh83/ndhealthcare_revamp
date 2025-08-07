@@ -31,7 +31,7 @@ export default function Home() {
   return (
     <>
       <Hero
-        title="Comprehensive Home Healthcare You Can Trust"
+        title="Comprehensive Home Healthcare and medical services You Can Trust"
         subTitle="From infant care to elderly support, we provide personalized, compassionate services right where you need them."
         bgUrl="/images/home_1/hero_bg.png"
         imgUrl={heroImage}
@@ -75,7 +75,7 @@ export default function Home() {
             {
               featureListTitle: "We are dedicated to providing compassionate,",
               featureListSubTitle:
-                "personalized homecare services that support the well-being and independence of individuals in the comfort of their own homes. We understand that every person has unique needs, and we tailor our services to ensure that our clients receive the highest quality care that promotes their health, dignity, and overall quality of life.",
+                "personalized homecare and medical services that support the well-being and independence of individuals in the comfort of their own homes. We understand that every person has unique needs, and we tailor our services to ensure that our clients receive the highest quality care that promotes their health, dignity, and overall quality of life.",
             },
           ]}
         />
@@ -178,7 +178,7 @@ export default function Home() {
       {/* Start Appointment Section */}
       <Section topMd={190} topLg={145} topXl={105} bottomMd={50} bottomLg={30} bottomXl={40} id="appointment">
         <AppointmentSection
-          sectionTitle="Appointment"
+          sectionTitle="Assessment"
           sectionTitleUp="BOOK AN"
           imgUrl={appointmentImg}
         />

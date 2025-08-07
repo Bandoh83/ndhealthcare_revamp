@@ -18,7 +18,7 @@ const WhoWeAreSection = () => {
             <div className="cs_height_5" />
             <p className="text-lg md:text-xl cs_heading_color leading-relaxed">
               <span className="font-semibold">ND Healthcare</span> is a
-              professional homecare service company dedicated to improving
+              professional homecare and medical services company dedicated to improving
               health outcomes through personalized and accessible care. We
               are committed to bridging the gap between clinical care and
               the comfort of your home.

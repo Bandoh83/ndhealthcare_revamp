@@ -59,7 +59,7 @@ export default function Header({ logoSrc, variant }) {
                       <Link
                         href="/about"
                         onClick={() => setMobileToggle(false)}
-                        style={{ color: "${accent}"  }}
+                        style={{ color: "${accent}" }}
                       >
                         About Us
                       </Link>
@@ -68,7 +68,7 @@ export default function Header({ logoSrc, variant }) {
                       <Link
                         href="/services"
                         onClick={() => setMobileToggle(false)}
-                        style={{ color: "${accent}"  }}
+                        style={{ color: "${accent}" }}
                       >
                         Our Services
                       </Link>
@@ -77,7 +77,7 @@ export default function Header({ logoSrc, variant }) {
                       <Link
                         href="/pricing-plan"
                         onClick={() => setMobileToggle(false)}
-                        style={{ color: "${accent}"  }}
+                        style={{ color: "${accent}" }}
                       >
                         Pricing
                       </Link>
@@ -86,7 +86,7 @@ export default function Header({ logoSrc, variant }) {
                       <Link
                         href="/contact"
                         onClick={() => setMobileToggle(false)}
-                        style={{ color: "${accent}"  }}
+                        style={{ color: "${accent}" }}
                       >
                         Contact
                       </Link>
@@ -141,53 +141,55 @@ export default function Header({ logoSrc, variant }) {
         </div>
       </header>
       <div className={`cs_sidenav ${sideNav ? "active" : ""}`}>
-  <div
-    className="cs_sidenav_overlay"
-    onClick={() => setSideNav(!sideNav)}
-  />
-  <div className="cs_sidenav_in">
-    <button
-      className="cs_close"
-      type="button"
-      onClick={() => setSideNav(!sideNav)}
-    >
-      <Image
-        src="/images/icons/close.svg"
-        alt="Close"
-        height={28}
-        width={28}
-      />
-    </button>
-    <div className="cs_logo_box">
-      <Image src={logoSrc} alt="Logo" height={28} width={173} />
-    
-      <h3 className="cs_fs_24 cs_semibold mb-0">
-        Your Partner in Health and Wellness
-      </h3>
-    </div>
-    <Spacing md="35" lg="35" xl="35" />
-    <hr />
-    <Spacing md="35" lg="50" xl="35" />
-    
-    {/* Become a Caregiver Section */}
-    <div className="cs_caregiver_section">
-      <h4 className="cs_fs_20 cs_semibold mb-3">Become a Caregiver</h4>
-      <p className="cs_fs_16 mb-3">Join our team of dedicated caregivers and make a difference in people`&apos;`s lives.</p>
-      <a 
-        href="https://docs.google.com/forms/d/e/1FAIpQLSfLpXtFUleXIhim8iQD266M46eirAoOCqWC9nVw1FBUiCplwA/alreadyresponded?pli=1&pli=1"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="cs_btn cs_style_1">
-        Apply Now
-      </a>
-    </div>
+        <div
+          className="cs_sidenav_overlay"
+          onClick={() => setSideNav(!sideNav)}
+        />
+        <div className="cs_sidenav_in">
+          <button
+            className="cs_close"
+            type="button"
+            onClick={() => setSideNav(!sideNav)}
+          >
+            <Image
+              src="/images/icons/close.svg"
+              alt="Close"
+              height={28}
+              width={28}
+            />
+          </button>
+          <div className="cs_logo_box">
+            <Image src={logoSrc} alt="Logo" height={28} width={173} />
 
-  
-    
-    <Spacing md="30" lg="30" xl="30" />
-    
-    {/* Become a Partner Section */}
-    <div className="cs_partner_section">
+            <h3 className="cs_fs_24 cs_semibold mb-0">
+              Your Partner in Health and Wellness
+            </h3>
+          </div>
+          <Spacing md="35" lg="35" xl="35" />
+          <hr />
+          <Spacing md="35" lg="50" xl="35" />
+
+          {/* Become a Caregiver Section */}
+          <div className="cs_caregiver_section">
+            <h4 className="cs_fs_20 cs_semibold mb-3">Become a Caregiver</h4>
+            <p className="cs_fs_16 mb-3">
+              Join our team of dedicated caregivers and make a difference in
+              people&apos;s lives.
+            </p>
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSfLpXtFUleXIhim8iQD266M46eirAoOCqWC9nVw1FBUiCplwA/alreadyresponded?pli=1&pli=1"
+              target="_blank"
+              rel="noopener noreferrer"
+              className=""
+            >
+              Apply Now
+            </a>
+          </div>
+
+          <Spacing md="30" lg="30" xl="30" />
+
+          {/* Become a Partner Section */}
+          {/* <div className="cs_partner_section">
       <h4 className="cs_fs_20 cs_semibold mb-3">Become a Partner</h4>
       <p className="cs_fs_16 mb-3">Partner with us to expand healthcare services in your community.</p>
       <button 
@@ -204,14 +206,14 @@ export default function Header({ logoSrc, variant }) {
       >
         Learn More
       </button>
-    </div>
-    
-    <Spacing md="70" lg="50" xl="50" />
-    <hr />
-    <Spacing md="70" lg="50" xl="50" />
-    <SocialWidget />
-  </div>
-</div>
+    </div> */}
+
+          <Spacing md="70" lg="50" xl="50" />
+          <hr />
+          <Spacing md="70" lg="50" xl="50" />
+          <SocialWidget />
+        </div>
+      </div>
     </>
   );
 }

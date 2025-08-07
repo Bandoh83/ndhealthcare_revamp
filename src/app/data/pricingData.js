@@ -188,9 +188,9 @@ export const pricingData = [
   },
 
   {
-    title: 'Note',
+    title: 'Assement Fee',
     subTitle:
-      'All services can be customized based on your specific health condition. </br> Initial assessment fee',
+      '',
     price: 'GHc 200',
     period: '',
     // featureList: [
@@ -297,7 +297,7 @@ export const workingProcessData = [
   {
     title: "Service Begins",
     subTitle:
-      "Our qualified caregivers or nurses will begin providing care at your home as scheduled.",
+      "Our qualified caregivers will begin providing care at your home as scheduled.",
     iconUrl: "/images/home_2/wording_process_icon_4.svg",
     number: "04",
   },
