@@ -115,9 +115,9 @@ export default function PartnerFormSection({
               >
                 {/* First Row - Name & Institution */}
                 <div className="cs_form_row">
-                  <div className="cs_form_field">
+                  <div className="">
                     <label htmlFor="name" className="cs_form_label">
-                      Name <span className="cs_required">*</span>
+                      Name <span className="cs_required"></span>
                     </label>
                     <input
                       type="text"
@@ -131,9 +131,9 @@ export default function PartnerFormSection({
                     />
                   </div>
 
-                  <div className="cs_form_field">
+                  <div className="">
                     <label htmlFor="institution" className="cs_form_label">
-                      Institution <span className="cs_required">*</span>
+                      Institution <span className="cs_required"></span>
                     </label>
                     <input
                       type="text"
@@ -150,9 +150,9 @@ export default function PartnerFormSection({
 
                 {/* Second Row - Role & Email */}
                 <div className="cs_form_row">
-                  <div className="cs_form_field">
+                  <div className="">
                     <label htmlFor="role" className="cs_form_label">
-                      Role <span className="cs_required">*</span>
+                      Role <span className="cs_required"></span>
                     </label>
                     <input
                       type="text"
@@ -166,9 +166,9 @@ export default function PartnerFormSection({
                     />
                   </div>
 
-                  <div className="cs_form_field">
+                  <div className="">
                     <label htmlFor="email" className="cs_form_label">
-                      Email <span className="cs_required">*</span>
+                      Email <span className="cs_required"></span>
                     </label>
                     <input
                       type="email"
@@ -185,9 +185,9 @@ export default function PartnerFormSection({
 
                 {/* Third Row - Contact (full width) */}
                 <div className="cs_form_row">
-                  <div className="cs_form_field cs_form_field_full">
+                  <div className=" cs_form_field_full">
                     <label htmlFor="contact" className="cs_form_label">
-                      Contact <span className="cs_required">*</span>
+                      Contact <span className="cs_required"></span>
                     </label>
                     <input
                       type="tel"
@@ -203,11 +203,10 @@ export default function PartnerFormSection({
                 </div>
 
                 {/* Submit Button Row */}
-                <div className="cs_form_row">
-                  <div className="cs_form_field cs_form_field_full cs_form_submit">
+               <div className=" d-flex justify-content-center">
+                  <div className="cs_btn cs_style_1">
                     <button
                       type="submit"
-                      className="cs_btn cs_style_1 w-100"
                       disabled={isSubmitting}
                     >
                       <span>

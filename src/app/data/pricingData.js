@@ -186,6 +186,24 @@ export const pricingData = [
     btnUrl: "/services/physiotherapy",
     popular: false,
   },
+
+  {
+    title: 'Note',
+    subTitle:
+      'All services can be customized based on your specific health condition. </br> Initial assessment fee',
+    price: 'GHc 200',
+    period: '',
+    // featureList: [
+    //   'In-House Physiotherapy Sessions',
+    //   'Mobility Improvement',
+    //   'Strength Building Exercises',
+    //   'Pain Management',
+    //   'Recovery Support',
+    // ],
+    // btnText: 'Get Started',
+    // btnUrl: '/contact',
+    popular: false,
+  },
 ];
 
 export const featureListData = [

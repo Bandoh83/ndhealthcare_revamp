@@ -4,7 +4,7 @@ import BannerSectionStyle5 from '../../ui/Section/BannerSection/BannerSectionSty
 import BannerSectionStyle6 from '../../ui/Section/BannerSection/BannerSectionStyle6';
 import DepartmentSectionStyle3 from '../../ui/Section/DepartmentSection/DepartmentSectionStyle3';
 import { departmentData } from './departmentData';
-import bannerImg from '../../../../public/images/departments/banner_img.png';
+import bannerImg from '../../../../public/images/departments/nurse.png';
 import bannerImg2 from '../../../../public/images/departments/banner_img_2.png';
 
 export default function Services() {

@@ -24,14 +24,14 @@ export default function PricingSection({ sectionTitle, data = [] }) {
         </div>
       </div>
 
-      <div className="text-center mt-5 pt-4">
+      {/* <div className="text-center mt-5 pt-4">
         <p className="cs_gray_color cs_fs_16 mb-2">
           All services can be customized based on your specific health condition.
         </p>
         <p className="cs_gray_color cs_fs_14">
           Initial assessment fee: <span className="cs_orange_color cs_medium">GHc 200</span>
         </p>
-      </div>
+      </div> */}
     </div>
   );
 }
