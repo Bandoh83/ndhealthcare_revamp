@@ -126,7 +126,7 @@ export default function Home() {
         {pricingData.slice(0, 3).map((item, index) => (
           <div key={index} className="col-lg-4 col-md-6">
             <div className="h-100">
-              <Link href="/pricing-plan" className="col-lg-4 col-md-6">
+              <Link href={`${item.btnUrl}`} className="col-lg-4 col-md-6">
                 <Pricing {...item} />
               </Link>
             </div>

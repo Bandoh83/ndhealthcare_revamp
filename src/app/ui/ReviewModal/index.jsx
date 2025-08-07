@@ -3,7 +3,8 @@ import React, { useState, useRef } from "react";
 import { Icon } from "@iconify/react";
 import Image from "next/image";
 
-const ReviewModal = ({ isOpen, onClose, onSubmit }) => {
+
+const ReviewModal = ({ isOpen, onClose, onSubmit, isSubmitting }) => {
   const [name, setName] = useState("");
   const [location, setLocation] = useState("");
   const [reviewText, setReviewText] = useState("");
@@ -38,8 +39,8 @@ const ReviewModal = ({ isOpen, onClose, onSubmit }) => {
       location,
       testimonial: reviewText,
       rating,
-      imgSrc: avatarPreview || "/images/home_1/avatar_3.png",
-      avatarFile
+      imgSrc:  "/images/home_1/avatar_3.jpg",
+      avatarFile,
     });
     setName("");
     setLocation("");
@@ -47,8 +48,6 @@ const ReviewModal = ({ isOpen, onClose, onSubmit }) => {
     setRating(0);
     onClose();
   };
-
-  console.log("file", avatarFile)
 
   return (
     <div className="cs_shape_wrap">
@@ -70,29 +69,29 @@ const ReviewModal = ({ isOpen, onClose, onSubmit }) => {
               >
                 {/* Avatar Upload Section */}
                 <div className="cs_form_field text-center mb-4">
-                  <div 
+                  <div
                     className="cs_avatar_upload"
                     onClick={triggerFileInput}
-                    style={{ cursor: 'pointer' }}
+                    style={{ cursor: "pointer" }}
                   >
                     {avatarPreview ? (
-                      <Image 
-                        src={avatarPreview} 
+                      <Image
+                        src={avatarPreview}
                         width={100}
                         height={200}
-                        alt="Avatar Preview" 
+                        alt="Avatar Preview"
                         className="cs_avatar_preview cs_radius_50"
                         style={{
-                          width: '100px',
-                          height: '100px',
-                          objectFit: 'cover',
-                          borderRadius: '50%'
+                          width: "100px",
+                          height: "100px",
+                          objectFit: "cover",
+                          borderRadius: "50%",
                         }}
                       />
                     ) : (
                       <div className="cs_avatar_placeholder cs_radius_50">
-                        <Icon 
-                          icon="fa6-solid:user-plus" 
+                        <Icon
+                          icon="fa6-solid:user-plus"
                           className="cs_fs_36 cs_orange_color"
                         />
                         <p className="cs_mb-0 cs_fs_14">Add Photo</p>
@@ -104,20 +103,22 @@ const ReviewModal = ({ isOpen, onClose, onSubmit }) => {
                     ref={fileInputRef}
                     onChange={handleAvatarChange}
                     accept="image/*"
-                    style={{ display: 'none' }}
+                    style={{ display: "none" }}
                   />
                   {avatarPreview && (
-                      <div className="cs_avatar_placeholder cs_radius_50"    onClick={() => {
+                    <div
+                      className="cs_avatar_placeholder cs_radius_50"
+                      onClick={() => {
                         setAvatarPreview(null);
                         setAvatarFile(null);
-                      }}>
-                        <Icon 
-                          icon="fa6-solid:user-minus" 
-                          className="cs_fs_36 cs_orange_color"
-                        />
-                        <p className="cs_mb-0 cs_fs_14">Remove Photo</p>
-                      </div>
-                
+                      }}
+                    >
+                      <Icon
+                        icon="fa6-solid:user-minus"
+                        className="cs_fs_36 cs_orange_color"
+                      />
+                      <p className="cs_mb-0 cs_fs_14">Remove Photo</p>
+                    </div>
                   )}
                 </div>
 
@@ -191,6 +192,20 @@ const ReviewModal = ({ isOpen, onClose, onSubmit }) => {
                 </div>
 
                 <div className="cs_form_field cs_form_row">
+                        <button
+                    type="submit"
+                    className="cs_btn cs_style_1 cs_radius_5 cs_shadow_1"
+                    disabled={isSubmitting}
+                  >
+                    <span className="cs_btn_icon">
+                      {isSubmitting ? (
+                        <Icon icon="svg-spinners:180-ring" />
+                      ) : (
+                        <Icon icon="fa6-solid:paper-plane" />
+                      )}
+                      {isSubmitting ? "Submitting..." : "Submit Review"}
+                    </span>
+                  </button>
                   <button
                     type="button"
                     className="cs_btn cs_outline_1 cs_radius_5"
@@ -200,14 +215,7 @@ const ReviewModal = ({ isOpen, onClose, onSubmit }) => {
                       <Icon icon="fa6-solid:xmark" /> Cancel
                     </span>
                   </button>
-                  <button
-                    type="submit"
-                    className="cs_btn cs_style_1 cs_radius_5 cs_shadow_1"
-                  >
-                    <span className="cs_btn_icon">
-                      <Icon icon="fa6-solid:paper-plane" /> Submit Review
-                    </span>
-                  </button>
+          
                 </div>
               </form>
             </div>

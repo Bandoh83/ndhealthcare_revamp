@@ -8,6 +8,9 @@ export default function PricingSection({ sectionTitle, data = [] }) {
     <div className="container">
       <SectionHeading title={sectionTitle} center />
       <Spacing md="72" lg="50" />
+
+
+      
       
       <div className="cs_pricing_clean_grid">
         <div className="row g-4">

@@ -1,7 +1,7 @@
 import nationWideImage from "@public/images/nationwide.png";
 import nhisImage from "@public/images/nhis.png";
 import redShotImage from "@public/images/redshot.png";
-import hefraImage from "@public/images/hefra.png";  
+import hefraImage from "@public/images/hefra.png";
 import healthNetImage from "@public/images/healthnet.png";
 import { HiHeart, HiUserGroup, HiShieldCheck } from "react-icons/hi2";
 import {
@@ -16,175 +16,177 @@ import {
   FaUserNurse,
 } from "react-icons/fa";
 
-
 export const pricingData = [
   {
-    title: 'Full Support Services',
+    title: "Full Support Services",
     subTitle:
-      'Comprehensive care including mobility assistance, stress management, and healthcare coordination for complete support.',
-    price: 'GHc 5,000',
-    period: '/month',
+      "Comprehensive care including mobility assistance, stress management, and healthcare coordination for complete support.",
+    price: "GHc 5,000",
+    period: "/month",
     featureList: [
-      'Mobility Assistance',
-      'Stress, Anxiety and Depression Management',
-      'Coordination with Healthcare Providers',
-      '24/7 Support Available',
+      "Mobility Assistance",
+      "Stress, Anxiety and Depression Management",
+      "Coordination with Healthcare Providers",
+      "24/7 Support Available",
     ],
-    btnText: 'Get Started',
-    btnUrl: '#',
+    btnText: "Get Started",
+    btnUrl: "/services/full-support-services",
     popular: true,
   },
   {
-    title: 'Elderly Support Care',
+    title: "Elderly Support Care",
     subTitle:
-      'Specialized care for seniors including mobility support, medication reminders, and personal care assistance.',
-    price: 'GHc 4,000',
-    period: '/month',
+      "Specialized care for seniors including mobility support, medication reminders, and personal care assistance.",
+    price: "GHc 4,000",
+    period: "/month",
     featureList: [
-      'Mobility Assistance',
-      'Medication Reminders',
-      'Assistance with Medical Appointments',
-      'Personal Care Support (Bathing)',
-      'Stress & Depression Management',
+      "Mobility Assistance",
+      "Medication Reminders",
+      "Assistance with Medical Appointments",
+      "Personal Care Support (Bathing)",
+      "Stress & Depression Management",
     ],
-    btnText: 'Get Started',
-    btnUrl: '#',
+    btnText: "Get Started",
+    btnUrl: "/services/elderly-care",
     popular: false,
   },
   {
-    title: 'Baby and Child Care',
+    title: "Baby and Child Care",
     subTitle:
-      'Dedicated childcare services including bathing, feeding support, and educational assistance for growing children.',
-    price: 'GHc 4,000',
-    period: '/month',
+      "Dedicated childcare services including bathing, feeding support, and educational assistance for growing children.",
+    price: "GHc 4,000",
+    period: "/month",
     featureList: [
-      'Bathing & Personal Care',
-      'Meal Preparation & Feeding Support',
-      'Educational Assistance',
-      'Oral Care & Grooming',
+      "Bathing & Personal Care",
+      "Meal Preparation & Feeding Support",
+      "Educational Assistance",
+      "Oral Care & Grooming",
     ],
-    btnText: 'Get Started',
-    btnUrl: '/contact',
+    btnText: "Get Started",
+    btnUrl: "/services/baby-and-child-care",
     popular: false,
   },
   {
-    title: 'Autism Care',
+    title: "Autism Care",
     subTitle:
-      'Specialized autism support with mobility exercises, speech therapy, and cognitive improvement activities.',
-    price: 'GHc 4,000',
-    period: '/month',
+      "Specialized autism support with mobility exercises, speech therapy, and cognitive improvement activities.",
+    price: "GHc 4,000",
+    period: "/month",
     featureList: [
-      'Mobility Strengthening Exercises',
-      'Speech Therapy',
-      'Concentration & Memory Activities',
-      'Personal Care Assistance',
-      'Stress & Anxiety Management',
+      "Mobility Strengthening Exercises",
+      "Speech Therapy",
+      "Concentration & Memory Activities",
+      "Personal Care Assistance",
+      "Stress & Anxiety Management",
     ],
-    btnText: 'Get Started',
-    btnUrl: '/contact',
+    btnText: "Get Started",
+    btnUrl: "/services/autism-care",
+    popular: false,
+
+  },
+  {
+    title: "Dementia Care",
+    subTitle:
+      "Compassionate dementia care focused on creating safe environments and cognitive support activities.",
+    price: "GHc 4,000",
+    period: "/month",
+    featureList: [
+      "Safe & Familiar Environment Setup",
+      "Memory & Concentration Activities",
+      "Stress & Depression Management",
+      "Specialized Dementia Support",
+    ],
+    btnText: "Get Started",
+    btnUrl: "/services/dementia-care",
+    popular: false,
+    
+  },
+  {
+    title: "Live-In Care",
+    subTitle:
+      "Round-the-clock care with a dedicated caregiver residing in your home for constant support and supervision.",
+    price: "GHc 4,000",
+    period: "/month",
+    featureList: [
+      "24/7 In-Home Caregiver",
+      "Round-the-Clock Support",
+      "Constant Care & Supervision",
+      "Personalized Care Plan",
+    ],
+    btnText: "Get Started",
+    btnUrl: "/services/live-in-care",
+    popular: false,
+    
+  },
+  {
+    title: "Post-Surgical Care",
+    subTitle:
+      "Specialized recovery support including mobility assistance, hygiene maintenance, and rehabilitation exercises.",
+    price: "GHc 3,000",
+    period: "/month",
+    featureList: [
+      "Mobility Assistance",
+      "Personal Hygiene Maintenance",
+      "Minimal Exercise Support",
+      "Feeding Support When Necessary",
+      "Stress & Anxiety Management",
+    ],
+    btnText: "Get Started",
+    btnUrl: "/services/post-surgical-care",
+    popular: false,
+    
+  },
+  {
+    title: "Neurological Care",
+    subTitle:
+      "Specialized care for neurological conditions with focused rehabilitation and support services.",
+    price: "GHc 2,000",
+    period: "/month",
+    featureList: [
+      "Specialized Neurological Support",
+      "Rehabilitation Assistance",
+      "Customized Care Plans",
+      "Professional Medical Coordination",
+    ],
+    btnText: "Get Started",
+    btnUrl: "/services/neurological-care",
+    popular: false,
+
+  },
+  {
+    title: "Home Visits/Assessments",
+    subTitle:
+      "Professional home assessments and visits to evaluate care needs and provide targeted support services.",
+    price: "GHc 2,000",
+    period: "/month",
+    featureList: [
+      "Professional Home Assessments",
+      "Care Need Evaluations",
+      "Customized Care Recommendations",
+      "Follow-up Visits",
+    ],
+    btnText: "Get Started",
+    btnUrl: "/services/elderly-care",
     popular: false,
   },
   {
-    title: 'Dementia Care',
+    title: "Physiotherapy",
     subTitle:
-      'Compassionate dementia care focused on creating safe environments and cognitive support activities.',
-    price: 'GHc 4,000',
-    period: '/month',
+      "Professional in-house physiotherapy sessions designed to improve mobility, strength, and overall physical wellbeing.",
+    price: "GHc 300",
+    period: "/session",
     featureList: [
-      'Safe & Familiar Environment Setup',
-      'Memory & Concentration Activities',
-      'Stress & Depression Management',
-      'Specialized Dementia Support',
+      "In-House Physiotherapy Sessions",
+      "Mobility Improvement",
+      "Strength Building Exercises",
+      "Pain Management",
+      "Recovery Support",
     ],
-    btnText: 'Get Started',
-    btnUrl: '/contact',
-    popular: false,
-  },
-  {
-    title: 'Live-In Care',
-    subTitle:
-      'Round-the-clock care with a dedicated caregiver residing in your home for constant support and supervision.',
-    price: 'GHc 4,000',
-    period: '/month',
-    featureList: [
-      '24/7 In-Home Caregiver',
-      'Round-the-Clock Support',
-      'Constant Care & Supervision',
-      'Personalized Care Plan',
-    ],
-    btnText: 'Get Started',
-    btnUrl: '/contact',
-    popular: false,
-  },
-  {
-    title: 'Post-Surgical Care',
-    subTitle:
-      'Specialized recovery support including mobility assistance, hygiene maintenance, and rehabilitation exercises.',
-    price: 'GHc 3,000',
-    period: '/month',
-    featureList: [
-      'Mobility Assistance',
-      'Personal Hygiene Maintenance',
-      'Minimal Exercise Support',
-      'Feeding Support When Necessary',
-      'Stress & Anxiety Management',
-    ],
-    btnText: 'Get Started',
-    btnUrl: '/contact',
-    popular: false,
-  },
-  {
-    title: 'Neurological Care',
-    subTitle:
-      'Specialized care for neurological conditions with focused rehabilitation and support services.',
-    price: 'GHc 2,000',
-    period: '/month',
-    featureList: [
-      'Specialized Neurological Support',
-      'Rehabilitation Assistance',
-      'Customized Care Plans',
-      'Professional Medical Coordination',
-    ],
-    btnText: 'Get Started',
-    btnUrl: '/contact',
-    popular: false,
-  },
-  {
-    title: 'Home Visits/Assessments',
-    subTitle:
-      'Professional home assessments and visits to evaluate care needs and provide targeted support services.',
-    price: 'GHc 2,000',
-    period: '/month',
-    featureList: [
-      'Professional Home Assessments',
-      'Care Need Evaluations',
-      'Customized Care Recommendations',
-      'Follow-up Visits',
-    ],
-    btnText: 'Get Started',
-    btnUrl: '/contact',
-    popular: false,
-  },
-  {
-    title: 'Physiotherapy',
-    subTitle:
-      'Professional in-house physiotherapy sessions designed to improve mobility, strength, and overall physical wellbeing.',
-    price: 'GHc 300',
-    period: '/session',
-    featureList: [
-      'In-House Physiotherapy Sessions',
-      'Mobility Improvement',
-      'Strength Building Exercises',
-      'Pain Management',
-      'Recovery Support',
-    ],
-    btnText: 'Get Started',
-    btnUrl: '/contact',
+    btnText: "Get Started",
+    btnUrl: "/services/physiotherapy",
     popular: false,
   },
 ];
-
-
 
 export const featureListData = [
   {
@@ -244,8 +246,6 @@ export const helpData = [
   },
 ];
 
-
-
 export const brandData = [
   { imgUrl: nationWideImage, imgAlt: "Brand" },
   { imgUrl: nhisImage, imgAlt: "Brand" },
@@ -283,7 +283,6 @@ export const workingProcessData = [
     iconUrl: "/images/home_2/wording_process_icon_4.svg",
     number: "04",
   },
-
 ];
 
 export const faqData = [

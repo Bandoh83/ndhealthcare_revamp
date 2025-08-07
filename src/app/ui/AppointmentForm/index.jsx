@@ -97,7 +97,7 @@ export default function AppointmentForm({ serviceType }) {
       onSubmit={async (values, { resetForm }) => {
         const { name, phone, description, date, time, service, email } = values;
         // Here you can handle the form submission, e.g., send data to an API
-        console.log("Form submitted with values:", values);
+      
         try {
           const response = await api.post("api/createappointment", {
             name,
@@ -117,7 +117,7 @@ export default function AppointmentForm({ serviceType }) {
             timerProgressBar: true,
             showConfirmButton: false,
           });
-          console.log("Appointment request submitted successfully:", response.data);
+          
           resetForm();
         } catch (error) {
           console.error("Error submitting appointment request:", error);
