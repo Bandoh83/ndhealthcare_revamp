@@ -2,6 +2,7 @@ import React from 'react';
 import Pricing from '../../Pricing';
 import SectionHeading from '../../SectionHeading';
 import Spacing from '../../Spacing';
+import Link from 'next/link';
 
 export default function PricingSection({ sectionTitle, data = [] }) {
   return (
@@ -17,7 +18,9 @@ export default function PricingSection({ sectionTitle, data = [] }) {
           {data.map((item, index) => (
             <div className="col-lg-4 col-md-6" key={index}>
               <div className="h-100">
+              <Link href={`${item.btnUrl}`}>
                 <Pricing {...item} />
+                </Link>
               </div>
             </div>
           ))}
