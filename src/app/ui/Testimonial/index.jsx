@@ -13,7 +13,7 @@ export default function Testimonial({ reviews }) {
   return (
     <div className="cs_tabs cs_style1">
       <ul className="cs_tab_links">
-        {reviews.map((review, index) => (
+        {reviews?.map((review, index) => (
           <li key={index} className={activeTab === index ? 'active' : ''}>
             <div 
               className="cs_tab_link_in" 

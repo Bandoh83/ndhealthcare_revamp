@@ -1,32 +1,32 @@
-import { Figtree, Poppins } from 'next/font/google';
-import './sass/index.scss';
-import SearchParamWrapper from './SearchParamWrapper';
+import { Figtree, Poppins } from "next/font/google";
+import "./sass/index.scss";
+import SearchParamWrapper from "./SearchParamWrapper";
+import QueryProvider from "@/app/ui/QueryProvider";
 
 const figtree = Figtree({
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
-  variable: '--font-primary',
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-primary",
 });
 const poppins = Poppins({
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
-  variable: '--font-secondary',
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-secondary",
 });
 
 export const metadata = {
   title: {
-    absolute: '',
-    default: 'ND Healthcare',
-    template: '%s | ND Healthcare',
+    absolute: "",
+    default: "ND Healthcare",
+    template: "%s | ND Healthcare",
   },
-  description: 'ND Healthcare',
+  description: "ND Healthcare",
   openGraph: {
-    title: 'ND Healthcare',
-    description: 'ND Healthcare',
-    images: ['/openGraphImage.png'],
+    title: "ND Healthcare",
+    description: "ND Healthcare",
+    images: ["/openGraphImage.png"],
   },
 };
-
 
 export default function RootLayout({ children }) {
   return (
@@ -36,9 +36,9 @@ export default function RootLayout({ children }) {
         <link rel="icon" href="/favicon.ico" sizes="any" />
       </head>
       <body className={`${figtree.variable} ${poppins.variable}`}>
-      <SearchParamWrapper>
-        {children}
-        </SearchParamWrapper>
+        <QueryProvider>
+          <SearchParamWrapper>{children}</SearchParamWrapper>
+        </QueryProvider>
       </body>
     </html>
   );

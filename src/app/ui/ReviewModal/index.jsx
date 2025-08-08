@@ -20,11 +20,13 @@ const ReviewModal = ({ isOpen, onClose, onSubmit, isSubmitting }) => {
     const file = e.target.files[0];
     if (file) {
       setAvatarFile(file);
-      const reader = new FileReader();
-      reader.onloadend = () => {
-        setAvatarPreview(reader.result);
-      };
-      reader.readAsDataURL(file);
+    //   const reader = new FileReader();
+    //   reader.onloadend = () => {
+    //     setAvatarPreview(reader.result);
+    //   };
+    //   reader.readAsDataURL(file);
+    const previewUrl = URL.createObjectURL(file)
+    setAvatarPreview(previewUrl)
     }
   };
 
@@ -39,7 +41,7 @@ const ReviewModal = ({ isOpen, onClose, onSubmit, isSubmitting }) => {
       location,
       testimonial: reviewText,
       rating,
-      imgSrc:  "/images/home_1/avatar_3.jpg",
+      imgSrc:  avatarPreview || "/images/home_1/avatar_3.jpg",
       avatarFile,
     });
     setName("");
@@ -138,7 +140,7 @@ const ReviewModal = ({ isOpen, onClose, onSubmit, isSubmitting }) => {
                   />
                 </div>
 
-                <div className="cs_form_field">
+                <div className="cs_form_field mb-4">
                   <label htmlFor="location" className="cs_form_label">
                     Your Location
                   </label>
@@ -154,7 +156,7 @@ const ReviewModal = ({ isOpen, onClose, onSubmit, isSubmitting }) => {
                   />
                 </div>
 
-                <div className="cs_form_field cs_rating_field">
+                <div className="cs_form_field cs_rating_field mb-4">
                   <label className="cs_form_label">Your Rating</label>
                   <div className="flex">
                     {[1, 2, 3, 4, 5].map((star) => (
@@ -175,7 +177,7 @@ const ReviewModal = ({ isOpen, onClose, onSubmit, isSubmitting }) => {
                   </div>
                 </div>
 
-                <div className="cs_form_field">
+                <div className="cs_form_field mb-4">
                   <label htmlFor="review" className="cs_form_label">
                     Your Review
                   </label>
@@ -197,9 +199,9 @@ const ReviewModal = ({ isOpen, onClose, onSubmit, isSubmitting }) => {
                     className="cs_btn cs_style_1 cs_radius_5 cs_shadow_1"
                     disabled={isSubmitting}
                   >
-                    <span className="cs_btn_icon">
+                    <span className="cs_btn_icon ">
                       {isSubmitting ? (
-                        <Icon icon="svg-spinners:180-ring" />
+                        <Icon icon="svg-spinners:180-ring mr-4" />
                       ) : (
                         <Icon icon="fa6-solid:paper-plane" />
                       )}

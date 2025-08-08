@@ -2,17 +2,14 @@
 import React, { useState } from "react";
 import { HiLocationMarker, HiMail, HiPhone } from "react-icons/hi";
 import Button from "../Button";
+import { Formik } from "formik";
+import * as Yup from "yup";
+import Image from "next/image";
+import useAxios from "@/app/utils/useAxios";
+import swal from "sweetalert2";
 
 export default function ContactForm() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    subject: "",
-    message: "",
-    agreeToData: false,
-  });
-
+  const api = useAxios();
   return (
     <div className="cs_contact_form cs_style_1 cs_white_bg cs_radius_30">
       <div className="cs_contact_form_wrap">
@@ -24,8 +21,8 @@ export default function ContactForm() {
           </h4>
           <div className="cs_height_18" />
           <p className="cs_section_subtitle">
-            We&apos;re here to help Reach out to us and we&apos;ll get back to you as soon
-            as possible.
+            We&apos;re here to help Reach out to us and we&apos;ll get back to
+            you as soon as possible.
           </p>
           <div className="cs_height_55" />
         </div>
@@ -67,89 +64,190 @@ export default function ContactForm() {
           </div>
 
           {/* Right Side - Contact Form */}
-          <div className="col-lg-7">
-            <div className="cs_form_wrap">
-              <div className="row">
-                <div className="col-lg-6">
-                  <label className="cs_input_label cs_heading_color">
-                    Name
-                  </label>
-                  <input
-                    type="text"
-                    name="name"
-                    className="cs_form_field"
-                    placeholder="David John"
-                    value={formData.name}
-                    required
-                  />
-                  <div className="cs_height_42 cs_height_xl_25" />
-                </div>
-                <div className="col-lg-6">
-                  <label className="cs_input_label cs_heading_color">
-                    Email Address
-                  </label>
-                  <input
-                    type="email"
-                    name="email"
-                    className="cs_form_field"
-                    placeholder="example@gmail.com"
-                    value={formData.email}
-                    required
-                  />
-                  <div className="cs_height_42 cs_height_xl_25" />
-                </div>
-                <div className="col-lg-6">
-                  <label className="cs_input_label cs_heading_color">
-                    Phone
-                  </label>
-                  <input
-                    type="tel"
-                    name="phone"
-                    className="cs_form_field"
-                    placeholder="0123 456 789"
-                    value={formData.phone}
-                  />
-                  <div className="cs_height_42 cs_height_xl_25" />
-                </div>
-                <div className="col-lg-6">
-                  <label className="cs_input_label cs_heading_color">
-                    Subject
-                  </label>
-                  <input
-                    type="text"
-                    name="subject"
-                    className="cs_form_field"
-                    placeholder="Your subject"
-                    value={formData.subject}
-                    required
-                  />
-                  <div className="cs_height_42 cs_height_xl_25" />
-                </div>
-                <div className="col-lg-12">
-                  <label className="cs_input_label cs_heading_color">
-                    Message
-                  </label>
-                  <textarea
-                    name="message"
-                    className="cs_form_field cs_textarea"
-                    placeholder="Your message"
-                    rows="3"
-                    value={formData.message}
-                    required
-                  />
-                  <div className="cs_height_42 cs_height_xl_25" />
-                </div>
+          <Formik
+            validateOnBlur
+            validateOnChange={false}
+            initialValues={{
+              name: "",
+              phoneNumber: "",
+              email: "",
+              subject: "",
+              message: "",
+            }}
+            validationSchema={Yup.object({
+              name: Yup.string().required("Required"),
+              phoneNumber: Yup.string().required("Required"),
+              subject: Yup.string().required("Required"),
 
-                <div className="cs_btn_wrapper">
-                  <Button
-                    btnUrl="#"
-                    btnText="Submit"
-                    variant="cs_btn_orange cs_radius_25 w-100 py-3"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
+              message: Yup.string().required("Required"),
+              email: Yup.string()
+                .email("Invalid email address")
+                .required("Required"),
+            })}
+            onSubmit={async (values, { resetForm }) => {
+              const { name, email, phoneNumber, subject, message } = values;
+
+              try {
+               await api.post("api/contact", {
+                  name,
+                  email,
+                  phoneNumber,
+                  subject,
+                  message,
+                });
+                swal.fire({
+                  title: "Message Submitted",
+                  icon: "success",
+                  toast: true,
+                  timer: 3000,
+                  position: "top-right",
+                  timerProgressBar: true,
+                  showConfirmButton: false,
+                });
+                resetForm();
+              } catch (error) {
+                console.error(error);
+                swal.fire({
+                  title: "Error",
+                  text: "There was an error submitting your message. Please try again later.",
+                  icon: "error",
+                  toast: true,
+                  timer: 3000,
+                  position: "top-right",
+                  timerProgressBar: true,
+                  showConfirmButton: false,
+                });
+              }
+            }}
+          >
+            {({
+              handleBlur,
+              handleChange,
+              handleSubmit,
+              values,
+              isSubmitting,
+            }) => {
+              return (
+                <form onSubmit={handleSubmit}>
+                  <div className="col-lg-7">
+                    <div className="cs_form_wrap">
+                      <div className="row">
+                        <div className="col-lg-6">
+                          <label className="cs_input_label cs_heading_color">
+                            Name
+                          </label>
+                          <input
+                            type="text"
+                            name="name"
+                            onChange={handleChange}
+                            onBlur={handleBlur}
+                            className="cs_form_field"
+                            placeholder="David John"
+                            value={values.name}
+                            required
+                          />
+                          <div className="cs_height_42 cs_height_xl_25" />
+                        </div>
+                        <div className="col-lg-6">
+                          <label className="cs_input_label cs_heading_color">
+                            Email Address
+                          </label>
+                          <input
+                            type="email"
+                            name="email"
+                            className="cs_form_field"
+                            onChange={handleChange}
+                            onBlur={handleBlur}
+                            placeholder="example@gmail.com"
+                            value={values.email}
+                            required
+                          />
+                          <div className="cs_height_42 cs_height_xl_25" />
+                        </div>
+                        <div className="col-lg-6">
+                          <label className="cs_input_label cs_heading_color">
+                            Phone
+                          </label>
+                          <input
+                            type="tel"
+                            name="phoneNumber"
+                            onChange={handleChange}
+                            onBlur={handleBlur}
+                            className="cs_form_field"
+                            placeholder="0123 456 789"
+                            value={values.phoneNumber}
+                          />
+                          <div className="cs_height_42 cs_height_xl_25" />
+                        </div>
+                        <div className="col-lg-6">
+                          <label className="cs_input_label cs_heading_color">
+                            Subject
+                          </label>
+                          <input
+                            type="text"
+                            name="subject"
+                            onChange={handleChange}
+                            onBlur={handleBlur}
+                            className="cs_form_field"
+                            placeholder="Your subject"
+                            value={values.subject}
+                            required
+                          />
+                          <div className="cs_height_42 cs_height_xl_25" />
+                        </div>
+                        <div className="col-lg-12">
+                          <label className="cs_input_label cs_heading_color">
+                            Message
+                          </label>
+                          <textarea
+                            name="message"
+                            className="cs_form_field cs_textarea"
+                            placeholder="Your message"
+                            rows="3"
+                            onChange={handleChange}
+                            onBlur={handleBlur}
+                            value={values.message}
+                            required
+                          />
+                          <div className="cs_height_42 cs_height_xl_25" />
+                        </div>
+
+                        <div className="cs_btn_wrapper">
+                          <button
+                            disabled={isSubmitting}
+                            type="submit"
+                            className="cs_btn cs_style_1"
+                          >
+                            {/* Using isSubmitting to disable the button during submission */}
+                            {isSubmitting ? (
+                              <span>Submitting...</span>
+                            ) : (
+                              <span>Submit</span>
+                            )}
+
+                            <i>
+                              <Image
+                                src="/images/icons/arrow_white.svg"
+                                alt="Icon"
+                                height={11}
+                                width={15}
+                              />
+                              <Image
+                                src="/images/icons/arrow_white.svg"
+                                alt="Icon"
+                                height={11}
+                                width={15}
+                              />
+                            </i>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              );
+            }}
+          </Formik>
         </div>
       </div>
     </div>

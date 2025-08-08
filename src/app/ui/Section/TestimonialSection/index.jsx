@@ -9,9 +9,11 @@ import useAxios from "@/app/utils/useAxios";
 import swal from "sweetalert2";
 import { v4 as uuidv4 } from "uuid";
 import Link from "next/link";
+import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 
 export default function TestimonialSection({ sectionTitle, sectionTitleDown }) {
   const api = useAxios();
+  const queryClient = useQueryClient();
 
   const hardCoded = [
     {
@@ -54,92 +56,167 @@ export default function TestimonialSection({ sectionTitle, sectionTitleDown }) {
 
   const [reviews, setReviews] = useState([]);
 
-  const [isLoading, setIsloading] = useState(false);
   const [pagination, setPagination] = useState({
     currentPage: 1,
     totalPages: 1,
     totalReviews: 0,
   });
 
-  useEffect(() => {
-    const fetchAllReviews = async (page =1) => {
-      setIsloading(true);
-      try {
-        const response = await api.get(`api/reviews?page=${page}`);
+  // useEffect(() => {
+  //   const fetchAllReviews = async (page = 1) => {
+  //     setIsloading(true);
+  //     try {
+  //       const response = await api.get(`api/reviews?page=${page}`);
 
-        const apiReviews = response.data.data.map((review) => ({
+  //       const apiReviews = response.data.data.map((review) => {
+  //         // Create image URL if image exists
+  //         let imageUrl = null;
+  //         if (review.image && review.image.image) {
+  //           try {
+  //             const bufferData = review.image.image.data.data;
+  //             const base64String = Buffer.from(bufferData).toString("base64");
+  //             imageUrl = `data:${review.image.image.contentType};base64,${base64String}`;
+  //           } catch (error) {
+  //             console.error("Error processing image:", error);
+  //           }
+  //         }
+
+  //         return {
+  //           id: review._id,
+  //           name: review.name,
+  //           location: review.location,
+  //           imgSrc: imageUrl || "/images/home_1/avatar_3.jpg",
+  //           testimonial: review.comment,
+  //           rating: review.rating,
+
+  //         };
+  //       });
+
+  //       setReviews([...apiReviews, ...hardCoded]);
+  //       setPagination({
+  //         currentPage: response.data.currentPage || 1,
+  //         totalPages: response.data.totalPages || 1,
+  //         totalReviews: response.data.totalReviews || hardCoded.length,
+  //       });
+  //     } catch (error) {
+  //       console.error(error);
+  //       setReviews(hardCoded);
+  //       setPagination({
+  //         currentPage: 1,
+  //         totalPages: 1,
+  //         totalReviews: hardCoded.length,
+  //       });
+  //     } finally {
+  //       setIsloading(false);
+  //     }
+  //   };
+
+  //   fetchAllReviews(1);
+  // }, []);
+
+  const { isLoading } = useQuery({
+    queryKey: ["reviews", pagination.currentPage],
+    queryFn: async () => {
+      const response = await api.get(
+        `api/reviews?page=${pagination.currentPage}`
+      );
+
+      const apiReviews = response.data.data?.map((review) => {
+        let imageUrl = null;
+        if (review.image && review.image.image) {
+          try {
+            const bufferData = review.image.image.data.data;
+            const base64String = Buffer.from(bufferData).toString("base64");
+            imageUrl = `data:${review.image.image.contentType};base64,${base64String}`;
+          } catch (error) {
+            console.error("Error processing image:", error);
+          }
+        }
+
+        return {
           id: review._id,
           name: review.name,
           location: review.location,
-          imgSrc: review.image,
+          imgSrc: imageUrl || "/images/home_1/avatar_3.jpg",
           testimonial: review.comment,
           rating: review.rating,
-        }));
+        };
+      });
 
-    
+      // Maintain your exact state update logic
+      setReviews([...apiReviews, ...hardCoded]);
+      setPagination({
+        currentPage: response.data.currentPage || 1,
+        totalPages: response.data.totalPages || 1,
+        totalReviews: response.data.totalReviews || hardCoded.length,
+      });
 
-        setReviews([...apiReviews, ...hardCoded]);
-        setPagination({
-          currentPage: response.data.currentPage || 1,
-          totalPages: response.data.totalPages || 1,
-          totalReviews: response.data.totalReviews || hardCoded.length,
-        });
-      } catch (error) {
-        console.error(error);
-        setReviews(hardCoded);
-        setPagination({
-          currentPage: 1,
-          totalPages: 1,
-          totalReviews: hardCoded.length,
-        });
-        swal.fire({
-          title: "Error",
-          text: "Error Fetching Reviews",
-          icon: "error",
-          toast: true,
-          timer: 3000,
-          position: "top-right",
-          timerProgressBar: true,
-          showConfirmButton: false,
-        });
-      } finally {
-        setIsloading(false);
-      }
-    };
+      return response.data;
+    },
 
-    fetchAllReviews(1);
-  }, []);
+    onError: () => {
+      // Maintain your exact error handling
+      setReviews(hardCoded);
+      setPagination({
+        currentPage: 1,
+        totalPages: 1,
+        totalReviews: hardCoded.length,
+      });
+    },
+  });
 
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const handleAddReview = async (newReview) => {
-    // Save current state for potential rollback
-    const previousReviews = [...reviews];
+  const { mutate: addReview } = useMutation({
+    mutationFn: async (newReview) => {
+      const formData = new FormData();
+      formData.append("name", newReview.name);
+      formData.append("location", newReview.location);
+      formData.append("rating", newReview.rating);
+      formData.append("comment", newReview.testimonial);
 
-    const tempId = uuidv4();
+      if (newReview.avatarFile) {
+        formData.append("image", newReview.avatarFile);
+      }
 
-    // Optimistically update UI
-    setReviews([{ ...newReview, id: tempId }, ...reviews]);
-
-
-    console.log(newReview)
-
-    try {
-      const response = await api.post("api/reviews/create", {
-        name: newReview.name,
-        location: newReview.location,
-        rating: newReview.rating,
-        comment: newReview.testimonial,
-        image: newReview.imgSrc,
+      const response = await api.post("api/reviews/create", formData, {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
       });
-
-    
+      return response.data;
+    },
+    onMutate: async (newReview) => {
+      // Preserve your optimistic update logic exactly
+      const previousReviews = [...reviews];
+      const tempId = uuidv4();
+      setReviews([{ ...newReview, id: tempId }, ...reviews]);
+      return { previousReviews, tempId };
+    },
+    onError: (error, variables, context) => {
+      // Preserve your exact rollback logic
+      setReviews(context.previousReviews);
+      swal.fire({
+        title: "Error",
+        text: "Failed to submit review. Please try again.",
+        icon: "error",
+        toast: true,
+        timer: 3000,
+        position: "top-right",
+        timerProgressBar: true,
+        showConfirmButton: false,
+      });
+    },
+    onSuccess: (data, variables, context) => {
+      // Preserve your exact success logic
       setReviews((prev) => [
-        { ...newReview, id: response.data._id },
-        ...prev.filter((review) => review.id !== tempId),
+        { ...variables, id: data._id },
+        ...prev.filter((review) => review.id !== context.tempId),
       ]);
-
-      
+      queryClient.invalidateQueries({
+        queryKey: ["reviews"],
+        exact: false, // Invalidate all review queries
+      });
 
       swal.fire({
         title: "Review Added Successfully",
@@ -150,24 +227,12 @@ export default function TestimonialSection({ sectionTitle, sectionTitleDown }) {
         timerProgressBar: true,
         showConfirmButton: false,
       });
-    } catch (error) {
-      // Rollback to previous state on error
-      setReviews(previousReviews);
+    },
+  });
 
-      swal.fire({
-        title: "Error",
-        text: "Failed to submit review. Please try again.",
-
-        icon: "error",
-        toast: true,
-        timer: 3000,
-        position: "top-right",
-        timerProgressBar: true,
-        showConfirmButton: false,
-      });
-    }
+  const handleAddReview = async (newReview) => {
+    addReview(newReview);
   };
-
   if (isLoading) {
     return (
       <div className="container">
@@ -189,22 +254,20 @@ export default function TestimonialSection({ sectionTitle, sectionTitleDown }) {
         center
       />
       <Spacing md="72" lg="50" />
-      <Testimonial reviews={reviews.slice(0, 5)} />
+      <Testimonial reviews={reviews.slice(0, 4)} />
       <Spacing md="72" lg="50" />
 
-      
-        <Link href="/reviews">
-          <button
-            style={{ textAlign: "left", float: "left" }}
-            className="cs_btn cs_outline_1 cs_radius_5"
-          >
-            <span>View More</span>
-            <span className="ml-2 flex items-center justify-center">
-              <FaArrowRight />
-            </span>
-          </button>
-        </Link>
-      
+      <Link href="/reviews">
+        <button
+          style={{ textAlign: "left", float: "left", marginBottom: "15px" }}
+          className="cs_btn cs_outline_1 cs_radius_5"
+        >
+          <span>View More</span>
+          <span className="ml-2 flex items-center justify-center">
+            <FaArrowRight />
+          </span>
+        </button>
+      </Link>
 
       <button
         style={{ textAlign: "right", float: "right" }}

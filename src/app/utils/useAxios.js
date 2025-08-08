@@ -1,5 +1,7 @@
 import axios, { InternalAxiosRequestConfig } from "axios";
 
+// https://nodejs-ndhealthcare.vercel.app/
+
 const useAxios = () => {
   const baseUrl = process.env.NEXT_PUBLIC_API_URL || "https://nodejs-ndhealthcare.vercel.app/";
 
@@ -9,6 +11,14 @@ const useAxios = () => {
     headers: {
       "Content-Type": "application/json",
     },
+  });
+
+    axiosInstance.interceptors.request.use((config) => {
+    if (config.data instanceof FormData) {
+      // Remove the default Content-Type for FormData
+      delete config.headers["Content-Type"];
+    }
+    return config;
   });
 
   return axiosInstance;
