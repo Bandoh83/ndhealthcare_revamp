@@ -53,7 +53,7 @@ export default function Home() {
           },
         ]}
         btnText="Book Now"
-        btnUrl="/appointments"
+        btnUrl="/"
       />
 
       {/* Start Feature Section */}
