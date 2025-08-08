@@ -148,21 +148,7 @@ export default function Home() {
 
       {/* End Departments Section */}
 
-      {/* Start Testimonial */}
-      <Section
-        topMd={165}
-        topLg={10}
-        topXl={100}
-        bottomMd={200}
-        bottomLg={150}
-        bottomXl={110}
-      >
-        <TestimonialSection
-          sectionTitle="Some Reviews"
-          sectionTitleDown="Of our clients"
-        />
-      </Section>
-      {/* End Testimonial */}
+    
 
       {/* Start Banner Section */}
       {/* <Section>
@@ -223,6 +209,23 @@ export default function Home() {
           sectionTitleUp="What People"
         />
       </Section>
+
+        {/* Start Testimonial */}
+      <Section
+        topMd={165}
+        topLg={10}
+        topXl={100}
+        bottomMd={200}
+        bottomLg={150}
+        bottomXl={110}
+      >
+        <TestimonialSection
+          sectionTitle="Some Reviews"
+          sectionTitleDown="Of our clients"
+        />
+      </Section>
+      {/* End Testimonial */}
+
     </>
   );
 }
