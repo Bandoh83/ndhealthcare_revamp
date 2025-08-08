@@ -15,15 +15,16 @@ const poppins = Poppins({
 });
 
 export const metadata = {
+  metadataBase: new URL('https://www.ndhealthcare.net'),
   title: {
     absolute: "",
     default: "ND Healthcare",
     template: "%s | ND Healthcare",
   },
-  description: "ND Healthcare",
+  description: "ND Healthcare is a leading provider of compassionate, high-quality homecare and medical services, empowering individuals to live independently and with dignity in the comfort of their own homes.",
   openGraph: {
     title: "ND Healthcare",
-    description: "ND Healthcare",
+    description: "ND Healthcare is a leading provider of compassionate, high-quality homecare and medical services, empowering individuals to live independently and with dignity in the comfort of their own homes.",
     images: ["/openGraphImage.png"],
   },
 };

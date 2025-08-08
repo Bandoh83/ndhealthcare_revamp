@@ -160,5 +160,21 @@ export const departmentData = [
     ],  
     href: '/services/live-in-care',
   },
+  {
+    slug: 'physiotherapy',
+    imgUrl: '/images/departments/physio.png',
+    price: 300,
+    iconUrl: '/images/departments/icon_1.svg',
+    title: 'Physiotherapy',
+    subTitle: 'Physiotherapy provides specialized care for individuals with injuries, disabilities, or medical conditions.',
+    points: [
+      'In-House Physiotherapy Sessions',
+      'Mobility Improvement',
+      'Strength Building Exercises',
+      'Pain Management',
+      'Recovery Support',
+    ],
+    href: '/services/physiotherapy',
+  }
 ];
 
