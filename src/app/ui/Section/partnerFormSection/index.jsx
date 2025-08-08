@@ -54,7 +54,7 @@ export default function PartnerFormSection({
 
     // Simulate API call
     try {
-       await api.post("partner/create", {
+       await api.post("api/partnerships/create", {
         name: formData.name,
         institution: formData.institution,
         role: formData.role,
