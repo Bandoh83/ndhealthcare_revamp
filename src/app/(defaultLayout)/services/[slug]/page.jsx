@@ -40,7 +40,7 @@ export default function ServiceDetails({ params }) {
         id="appointment"
       >
         <AppointmentSection
-          sectionTitle="Appointment"
+          sectionTitle="Assessment"
           sectionTitleUp="BOOK AN"
           imgUrl={appointmentImage}
           serviceName={service.title}
