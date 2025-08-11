@@ -39,6 +39,12 @@ export default function ContactForm() {
                   <p>
                     City Galleria, 4th Floor opposite the Accra Mall off the
                     Spintex Road,
+                    <br />
+                    <br />
+                    Kumasi Office, Lancaster Kumasi city
+                    <br/>
+                    <br />
+                    Training centre, Ahodwo roundabout, 3rd floor Nyarko Plaza
                   </p>
                 </div>
               </div>
@@ -64,6 +70,7 @@ export default function ContactForm() {
           </div>
 
           {/* Right Side - Contact Form */}
+          <div className="col-lg-7">
           <Formik
             validateOnBlur
             validateOnChange={false}
@@ -129,7 +136,7 @@ export default function ContactForm() {
             }) => {
               return (
                 <form onSubmit={handleSubmit}>
-                  <div className="col-lg-7">
+                 
                     <div className="cs_form_wrap">
                       <div className="row">
                         <div className="col-lg-6">
@@ -243,11 +250,12 @@ export default function ContactForm() {
                         </div>
                       </div>
                     </div>
-                  </div>
+                 
                 </form>
               );
             }}
           </Formik>
+          </div>
         </div>
       </div>
     </div>

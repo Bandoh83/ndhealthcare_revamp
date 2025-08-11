@@ -9,6 +9,8 @@ export default function ContactInfoWidget() {
           <Icon icon="ep:location" />
         </i>
         City Galleria, 4th Floor opposite the Accra Mall off the Spintex Road,
+        
+        
       </li>
       <li>
         <i className="cs_accent_bg">
