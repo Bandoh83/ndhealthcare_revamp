@@ -151,7 +151,7 @@ export default function About() {
         bgUrl="/images/about/hero_bg.png"
         imgUrl={bannerImg}
         title="Welcome to <br /> ND Healthcare"
-        subTitle="we provide compassionate, personalized homecare and medical services tailored to each individual's needs. Our dedicated team of physiotherapists, nurses, and caregivers delivers high quality support from elderly and autism care to post-surgical and daily assistance helping clients live with dignity and independence in the comfort of their homes."
+        subTitle="We provide compassionate, personalised homecare and medical services tailored to each individual's needs. Our dedicated team of physiotherapists, nurses, and caregivers delivers high quality support from elderly and autism care to post-surgical and daily assistance helping clients live with dignity and independence in the comfort of their homes."
       />
  <Section topMd={100} topLg={90} topXl={90}>
     <WhoWeAreSection/>
